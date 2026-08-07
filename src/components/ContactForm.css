@@ -1,0 +1,65 @@
+.contact {
+  padding: 56px 0 96px;
+  border-top: 1px solid var(--line);
+}
+
+.contact__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+@media (max-width: 780px) {
+  .contact__inner {
+    grid-template-columns: 1fr;
+  }
+}
+
+.contact__title {
+  font-size: 28px;
+  margin: 12px 0 10px;
+}
+
+.contact__form {
+  display: grid;
+  gap: 12px;
+}
+
+.contact__form input,
+.contact__form textarea {
+  width: 100%;
+  background: var(--bg-panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 14px;
+  resize: vertical;
+}
+
+.contact__form input::placeholder,
+.contact__form textarea::placeholder {
+  color: var(--text-muted);
+}
+
+.contact__form input:focus,
+.contact__form textarea:focus {
+  outline: none;
+  border-color: var(--accent-live);
+}
+
+.contact__form button {
+  justify-self: start;
+  margin-top: 4px;
+  border: none;
+}
+
+.contact__success {
+  padding: 20px;
+  border: 1px solid var(--accent-live);
+  border-radius: var(--radius-md);
+  color: var(--accent-live);
+  background: var(--accent-dim);
+}

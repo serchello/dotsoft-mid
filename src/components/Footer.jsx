@@ -1,0 +1,204 @@
+import { useState } from 'react';
+
+/**
+ * Footer в 3 яруса, как на dotsoft.gr:
+ * 1) логотип + 2 колонки (контакты / форма Newsletter) на тёмном фоне с ромбовидным паттерном
+ * 2) тонкая нижняя полоса — соцсети слева, копирайт по центру, юридические ссылки справа
+ */
+export default function Footer({ contact = DEFAULT_CONTACT }) {
+  const [form, setForm] = useState({ name: '', company: '', email: '' });
+  const [status, setStatus] = useState('idle');
+
+  function handleChange(e) {
+    setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    setStatus('sending');
+    setTimeout(() => setStatus('sent'), 600);
+  }
+
+  return (
+    <footer className="relative overflow-hidden bg-[#0d1b1f] text-white">
+
+
+      <div className="relative mx-auto max-w-[1400px] px-4 pt-12 sm:px-6 sm:pt-16">
+        <a href="/" className="inline-flex items-center gap-2">
+          <img 
+            src="/images/logo_footer.png" 
+            alt="DOTSOFT" 
+            className="h-9 w-auto"
+          />
+        </a>
+
+        <div className="mt-10 grid grid-cols-1 gap-10 pb-14 sm:mt-12 md:grid-cols-2 md:gap-16">
+          {/* Контакты */}
+          <div>
+            <h3 className="text-md font-semibold tracking-wide text-white/70">Επικοινωνία</h3>
+            <ul className="mt-4 space-y-3 text-sm text-white/80">
+              <ContactRow icon={<IconBuilding />}>{contact.address}</ContactRow>
+              <ContactRow icon={<IconMail />}>
+                <a href={`mailto:${contact.email}`} className="hover:text-[#7ac142]">
+                  {contact.email}
+                </a>
+              </ContactRow>
+              <ContactRow icon={<IconPhone />}>
+                <a href={`tel:${contact.phone.replace(/\s/g, '')}`} className="hover:text-[#7ac142]">
+                  {contact.phone}
+                </a>
+              </ContactRow>
+              <ContactRow icon={<IconFax />}>{contact.fax}</ContactRow>
+              <ContactRow icon={<IconId />}>Αρ.ΓΕΜΗ: {contact.gemh}</ContactRow>
+            </ul>
+          </div>
+
+          {/* Newsletter */}
+          <div>
+            <h3 className="text-md font-semibold tracking-wide text-white/70">
+              Εγγραφείτε στο Newsletter!
+            </h3>
+
+            {status === 'sent' ? (
+              <p className="mt-4 rounded border border-[#7ac142]/40 bg-[#7ac142]/10 px-4 py-3 text-sm text-[#7ac142]">
+                ✓ Εγγραφήκατε επιτυχώς στο newsletter.
+              </p>
+            ) : (
+              <form onSubmit={handleSubmit} className="mt-5 max-w-md">
+                <FooterInput name="name" placeholder="Ονοματεπώνυμο *" value={form.name} onChange={handleChange} />
+                <FooterInput name="company" placeholder="Φορέας *" value={form.company} onChange={handleChange} />
+                <FooterInput
+                  name="email"
+                  type="email"
+                  placeholder="Διεύθυνση Email *"
+                  value={form.email}
+                  onChange={handleChange}
+                />
+                <button
+                  type="submit"
+                  disabled={status === 'sending'}
+                  className="mt-1 w-full border-b border-white/20 py-3 text-center text-sm font-medium text-white/90 transition hover:border-[#7ac142] hover:text-[#7ac142] disabled:opacity-60"
+                >
+                  {status === 'sending' ? 'Αποστολή…' : 'Εγγραφείτε!'}
+                </button>
+              </form>
+            )}
+          </div>
+        </div>
+      </div>
+
+      {/* Нижняя полоса */}
+      <div className="relative border-t border-white/10">
+        <div className="mx-auto flex max-w-[1400px] flex-col items-center gap-4 px-4 py-6 text-xs text-white/80 sm:px-6 md:flex-row md:justify-between">
+          <div className="flex items-center gap-3 order-1">
+            <SocialIcon href="#" label="Facebook">
+              <img src="/images/svg/facebook.svg" alt="Facebook" className="h-7 w-7" />
+            </SocialIcon>
+            <SocialIcon href="#" label="YouTube">
+              <img src="/images/svg/youtube.svg" alt="YouTube" className="h-7 w-7" />
+            </SocialIcon>
+            <SocialIcon href="#" label="LinkedIn">
+              <img src="/images/svg/linkedin.svg" alt="LinkedIn" className="h-7 w-7" />
+            </SocialIcon>
+          </div>
+
+          <p className="order-3 text-center md:order-2">
+            © Copyright DOTSOFT SA {new Date().getFullYear()}. All Rights Reserved.
+          </p>
+
+          <div className="order-2 flex flex-col items-center gap-1 text-center md:order-3 md:items-end md:text-right">
+            <div className="flex gap-4">
+              <a href="#" className="hover:text-white">
+                Πολιτική Cookies
+              </a>
+              <a href="#" className="hover:text-white">
+                Όροι Χρήσης
+              </a>
+            </div>
+            <a href="#" className="hover:text-white">
+              Προσωπικά Δεδομένα
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}
+
+const DEFAULT_CONTACT = {
+  address: 'Ποσειδώνος 71, Θεσσαλονίκη Πυλαία, 55535',
+  email: 'info@dotsoft.gr',
+  phone: '+30 2310 500181',
+  fax: '+30 2310 551844',
+  gemh: '059277904000',
+};
+
+function ContactRow({ icon, children }) {
+  return (
+    <li className="flex items-start gap-3">
+      <span className="mt-0.5 text-[#7ac142]">{icon}</span>
+      <span>{children}</span>
+    </li>
+  );
+}
+
+function FooterInput(props) {
+  return (
+    <input
+      {...props}
+      required
+      className="mb-4 w-full border-b border-white/20 bg-transparent pb-2 text-sm text-white placeholder-white/50 outline-none transition focus:border-[#7ac142]"
+    />
+  );
+}
+
+function SocialIcon({ href, label, children }) {
+  return (
+    <a
+      href={href}
+      aria-label={label}
+      className="flex items-center justify-center rounded-full "
+    >
+      {children}
+    </a>
+  );
+}
+
+
+
+function IconBuilding() {
+  return (
+    <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M3 21h18M5 21V6l7-3 7 3v15M9 9h1m4 0h1m-6 4h1m4 0h1m-6 4h1m4 0h1" />
+    </svg>
+  );
+}
+function IconMail() {
+  return (
+    <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M3 6l9 6 9-6M4 5h16a1 1 0 011 1v12a1 1 0 01-1 1H4a1 1 0 01-1-1V6a1 1 0 011-1z" />
+    </svg>
+  );
+}
+function IconPhone() {
+  return (
+    <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M3 5c0 9.4 6.6 16 16 16l2-4-5-2-2 2c-2.5-1-4-2.5-5-5l2-2-2-5H3z" />
+    </svg>
+  );
+}
+function IconFax() {
+  return (
+    <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M6 3h9v6H6zM4 9h16v10a1 1 0 01-1 1H5a1 1 0 01-1-1V9zM8 14h8" />
+    </svg>
+  );
+}
+function IconId() {
+  return (
+    <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <rect x="3" y="5" width="18" height="14" rx="2" strokeWidth={1.8} />
+      <path strokeLinecap="round" strokeWidth={1.8} d="M7 9h4M7 12h6M7 15h3" />
+    </svg>
+  );
+}

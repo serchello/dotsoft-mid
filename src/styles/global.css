@@ -1,0 +1,142 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* --- Токен-система --- */
+  /* Цвет: тёмный "терминал наблюдения" + сигнальный акцент; акцент переопределяется на уровне услуги (meta.background) */
+  --bg-deep: #0b1512;
+  --bg-panel: #101d19;
+  --bg-panel-raised: #152620;
+  --line: rgba(255, 255, 255, 0.08);
+  --line-strong: rgba(255, 255, 255, 0.16);
+  --text-primary: #eef3f0;
+  --text-secondary: #a8bab2;
+  --text-muted: #6f8a80;
+  --accent: #5be7a9; /* сигнальный зелёный по умолчанию, переопределяется JS-переменной --accent-live */
+  --accent-dim: rgba(91, 231, 169, 0.16);
+  --accent-live: var(--accent);
+
+  --font-display: 'Space Grotesk', 'Inter', sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+
+  --container: 1180px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-deep);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-image: radial-gradient(circle at 15% 0%, rgba(91, 231, 169, 0.06), transparent 45%),
+    radial-gradient(circle at 85% 20%, rgba(91, 231, 169, 0.04), transparent 40%);
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  line-height: 1.15;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+p {
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-live);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.eyebrow::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-live);
+  box-shadow: 0 0 0 3px var(--accent-dim);
+}
+
+/* Кнопки */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 22px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: transform 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+}
+
+.btn-primary {
+  background: var(--accent-live);
+  color: #06140f;
+}
+.btn-primary:hover {
+  transform: translateY(-1px);
+}
+
+.btn-ghost {
+  border-color: var(--line-strong);
+  color: var(--text-primary);
+  background: transparent;
+}
+.btn-ghost:hover {
+  border-color: var(--accent-live);
+  color: var(--accent-live);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
