@@ -1,77 +1,112 @@
-// Базовый URL: в dev идёт через vite-прокси (см. vite.config.js), чтобы обойти CORS.
-// В проде замените на свой серверный прокси или на прямой URL, если WP отдаёт CORS-заголовки.
-const BASE_URL = import.meta.env.VITE_API_BASE_URL || '/api/dotsoft';
+const API_BASE = 'https://dotsoft.gr';
 
-/**
- * Получить один "пост" (услугу/продукт) по типу и id.
- * Пример реального эндпоинта: https://dotsoft.gr/wp-json/allposts/v1/service/30001
- */
-export async function fetchPost(type, id, { signal } = {}) {
-  const res = await fetch(`${BASE_URL}/${type}/${id}`, { signal });
-  if (!res.ok) {
-    throw new Error(`Σφάλμα API (${res.status}) για ${type}/${id}`);
+export async function fetchPost(type, id, options = {}) {
+  const url = `${API_BASE}/wp-json/allposts/v1/${type}/${id}`;
+  
+  try {
+    const response = await fetch(url, {
+      ...options,
+      headers: {
+        'Accept': 'application/json',
+        ...(options.headers || {})
+      }
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error('Error fetching post:', error);
+    throw error;
   }
-  const data = await res.json();
-  if (data?.code) {
-    // WP REST συνήθως επιστρέφει {code, message} σε σφάλμα ακόμη και με status 200
-    throw new Error(data.message || 'Άγνωστο σφάλμα API');
-  }
-  return data;
 }
 
-/**
- * Разобрать «грязный» WordPress-HTML из поля content на предсказуемые части:
- * основной текст, галерею изображений, видео (YouTube), ссылку на PDF
- * и список связанных услуг (только эта секция реально пригождается в верстке dotsoft.gr).
- * Формы (wpcf7) сознательно отбрасываются — под них строится собственный React-компонент.
- */
-export function parseServiceContent(html) {
-  if (!html || typeof window === 'undefined') {
-    return { bodyHtml: '', gallery: [], video: null, pdfUrl: null, related: [] };
+export function parseServiceContent(content) {
+  if (!content) {
+    return {
+      bodyHtml: '',
+      pdfUrl: null,
+      gallery: [],
+      video: null,
+      related: []
+    };
   }
 
-  const doc = new DOMParser().parseFromString(html, 'text/html');
+  const images = [];
+  const files = [];
+  let video = null;
+  let pdfUrl = null;
 
-  // Видео (YouTube iframe)
-  const iframe = doc.querySelector('iframe[src*="youtube"]');
-  const video = iframe ? iframe.getAttribute('src') : null;
+  const tempDiv = document.createElement('div');
+  tempDiv.innerHTML = content;
 
-  // PDF-ссылка
-  const pdfLink = Array.from(doc.querySelectorAll('a[href$=".pdf"]'))[0];
-  const pdfUrl = pdfLink ? pdfLink.getAttribute('href') : null;
+  const iframe = tempDiv.querySelector('iframe');
+  if (iframe) {
+    video = iframe.src;
+  }
 
-  // Галерея — картинки внутри <figure>
-  const gallery = Array.from(doc.querySelectorAll('figure img')).map((img) => ({
-    src: img.getAttribute('src'),
-    alt: img.getAttribute('alt') || '',
-  }));
+  const pdfLink = tempDiv.querySelector('a[href$=".pdf"]');
+  if (pdfLink) {
+    pdfUrl = pdfLink.href;
+    files.push({
+      url: pdfLink.href,
+      name: pdfLink.textContent.trim() || 'Download PDF',
+      ext: 'pdf'
+    });
+  }
 
-  // Связанные услуги — <ul> где встречаются <h5><a><img>Название</a></h5>
-  const related = [];
-  doc.querySelectorAll('ul').forEach((ul) => {
-    const items = ul.querySelectorAll('h5 > a');
-    if (items.length > 0) {
-      items.forEach((a) => {
-        const img = a.querySelector('img');
-        related.push({
-          name: a.textContent.trim(),
-          href: a.getAttribute('href'),
-          logo: img ? img.getAttribute('src') : null,
-        });
+  const imgElements = tempDiv.querySelectorAll('img');
+  imgElements.forEach(img => {
+    if (img.src) {
+      images.push({
+        src: img.src,
+        alt: img.alt || '',
+        caption: ''
       });
     }
   });
 
-  // Основной текст — убираем формы, nav-список услуг, iframe, script/style
-  doc.querySelectorAll('form, ul, iframe, script, style').forEach((el) => el.remove());
-  const bodyHtml = doc.body.innerHTML.trim();
+  const relatedLinks = tempDiv.querySelectorAll('h5 a');
+  const related = Array.from(relatedLinks).map(link => ({
+    url: link.href,
+    text: link.textContent.trim(),
+    logo: link.querySelector('img')?.src || null
+  }));
 
-  return { bodyHtml, gallery, video, pdfUrl, related };
+  return {
+    bodyHtml: content,
+    pdfUrl: pdfUrl,
+    gallery: images,
+    video: video,
+    related: related,
+    images: images,
+    files: files
+  };
 }
 
-/** Достаём YouTube video id из embed-URL, чтобы построить превью-thumbnail без автозагрузки iframe. */
-export function getYoutubeId(embedUrl) {
-  if (!embedUrl) return null;
-  const match = embedUrl.match(/embed\/([a-zA-Z0-9_-]+)/);
-  return match ? match[1] : null;
+export function getYoutubeId(url) {
+  if (!url) return null;
+  
+  const patterns = [
+    /(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&\s?#]+)/,
+    /youtube\.com\/embed\/([^&\s?#]+)/
+  ];
+  
+  for (const pattern of patterns) {
+    const match = url.match(pattern);
+    if (match) {
+      return match[1];
+    }
+  }
+  
+  return null;
+}
+
+export function getYoutubeEmbedUrl(url) {
+  const id = getYoutubeId(url);
+  if (!id) return null;
+  return `https://www.youtube.com/embed/${id}`;
 }

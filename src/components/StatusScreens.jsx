@@ -1,34 +1,22 @@
-import './StatusScreens.css';
-
 export function LoadingScreen() {
   return (
-    <div className="status-screen">
-      <div className="skeleton skeleton--eyebrow" />
-      <div className="skeleton skeleton--title" />
-      <div className="skeleton skeleton--line" />
-      <div className="skeleton skeleton--line short" />
+    <div className="flex items-center justify-center min-h-screen">
+      <div className="text-center">
+        <div className="inline-block animate-spin rounded-full h-12 w-12 border-4 border-[#7ac142] border-t-transparent"></div>
+        <p className="mt-4 text-gray-600">Φόρτωση...</p>
+      </div>
     </div>
   );
 }
 
-export function ErrorScreen({ message, onRetry }) {
+export function ErrorScreen({ message }) {
   return (
-    <div className="status-screen status-screen--error">
-      <span className="eyebrow" style={{ '--accent-live': '#f2795a' }}>
-        Σφάλμα φόρτωσης
-      </span>
-      <h2>Δεν βρέθηκαν δεδομένα υπηρεσίας</h2>
-      <p>{message}</p>
-      <p className="status-screen__hint">
-        Πιθανή αιτία: το WordPress REST API του dotsoft.gr δεν επιστρέφει header
-        <code> Access-Control-Allow-Origin</code>, οπότε το fetch από άλλο domain μπλοκάρεται από CORS.
-        Δείτε το README για proxy λύση.
-      </p>
-      {onRetry && (
-        <button className="btn btn-ghost" onClick={onRetry}>
-          Δοκιμάστε ξανά
-        </button>
-      )}
+    <div className="flex items-center justify-center min-h-screen">
+      <div className="text-center max-w-md">
+        <div className="text-6xl mb-4">😕</div>
+        <h2 className="text-2xl font-semibold text-red-600 mb-2">Κάτι πήγε στραβά</h2>
+        <p className="text-gray-600">{message || 'Προσπαθήστε ξανά αργότερα.'}</p>
+      </div>
     </div>
   );
 }

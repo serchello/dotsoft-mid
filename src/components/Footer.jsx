@@ -1,13 +1,14 @@
 import { useState } from 'react';
 
-/**
- * Footer в 3 яруса, как на dotsoft.gr:
- * 1) логотип + 2 колонки (контакты / форма Newsletter) на тёмном фоне
- * 2) тонкая нижняя полоса — соцсети слева, копирайт по центру, юридические ссылки справа
- */
-export default function Footer({ contact = DEFAULT_CONTACT }) {
+export default function Footer({ contact = {} }) {
   const [form, setForm] = useState({ name: '', company: '', email: '' });
   const [status, setStatus] = useState('idle');
+
+  const address = contact?.address || 'Ποσειδώνος 71, Θεσσαλονίκη Πυλαία, 55535';
+  const email = contact?.email || 'info@dotsoft.gr';
+  const phone = contact?.phone || '+30 2310 500181';
+  const fax = contact?.fax || '+30 2310 551844';
+  const gemh = contact?.gemh || '059277904000';
 
   function handleChange(e) {
     setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
@@ -20,47 +21,32 @@ export default function Footer({ contact = DEFAULT_CONTACT }) {
   }
 
   return (
-    <footer className="relative overflow-hidden  text-white">
-      {/* Основной контейнер — на всю ширину, без отступов сверху */}
+    <footer className="relative overflow-hidden text-white">
       <div className="relative">
-        {/* Контейнер с разделением 70/30 */}
         <div className="flex flex-col md:flex-row">
-          {/* Левая часть — 70% с отступами только слева и снизу */}
           <div className="w-full md:w-[70%] px-14 sm:px-16 pb-14 pt-14 bg-[#1f2e32]">
             <a href="/" className="inline-flex items-center gap-2">
-              <img 
-                src="/images/logo_footer.png" 
-                alt="DOTSOFT" 
-                className="h-9 w-auto"
-              />
+              <img src="/images/logo_footer.png" alt="DOTSOFT" className="h-9 w-auto" />
             </a>
 
             <div className="mt-10 grid grid-cols-1 gap-10 sm:mt-12 md:grid-cols-2 md:gap-16">
-              {/* Контакты */}
               <div>
                 <h3 className="text-md font-semibold tracking-wide text-white/70">Επικοινωνία</h3>
                 <ul className="mt-4 space-y-3 text-sm text-white/80">
-                  <ContactRow icon={<IconBuilding />}>{contact.address}</ContactRow>
+                  <ContactRow icon={<IconBuilding />}>{address}</ContactRow>
                   <ContactRow icon={<IconMail />}>
-                    <a href={`mailto:${contact.email}`} className="hover:text-[#7ac142]">
-                      {contact.email}
-                    </a>
+                    <a href={`mailto:${email}`} className="hover:text-[#7ac142]">{email}</a>
                   </ContactRow>
                   <ContactRow icon={<IconPhone />}>
-                    <a href={`tel:${contact.phone.replace(/\s/g, '')}`} className="hover:text-[#7ac142]">
-                      {contact.phone}
-                    </a>
+                    <a href={`tel:${phone.replace(/\s/g, '')}`} className="hover:text-[#7ac142]">{phone}</a>
                   </ContactRow>
-                  <ContactRow icon={<IconFax />}>{contact.fax}</ContactRow>
-                  <ContactRow icon={<IconId />}>Αρ.ΓΕΜΗ: {contact.gemh}</ContactRow>
+                  <ContactRow icon={<IconFax />}>{fax}</ContactRow>
+                  <ContactRow icon={<IconId />}>Αρ.ΓΕΜΗ: {gemh}</ContactRow>
                 </ul>
               </div>
 
-              {/* Newsletter */}
               <div>
-                <h3 className="text-md font-semibold tracking-wide text-white/70">
-                  Εγγραφείτε στο Newsletter!
-                </h3>
+                <h3 className="text-md font-semibold tracking-wide text-white/70">Εγγραφείτε στο Newsletter!</h3>
 
                 {status === 'sent' ? (
                   <p className="mt-4 rounded border border-[#7ac142]/40 bg-[#7ac142]/10 px-4 py-3 text-sm text-[#7ac142]">
@@ -70,13 +56,7 @@ export default function Footer({ contact = DEFAULT_CONTACT }) {
                   <form onSubmit={handleSubmit} className="mt-5 max-w-md">
                     <FooterInput name="name" placeholder="Ονοματεπώνυμο *" value={form.name} onChange={handleChange} />
                     <FooterInput name="company" placeholder="Φορέας *" value={form.company} onChange={handleChange} />
-                    <FooterInput
-                      name="email"
-                      type="email"
-                      placeholder="Διεύθυνση Email *"
-                      value={form.email}
-                      onChange={handleChange}
-                    />
+                    <FooterInput name="email" type="email" placeholder="Διεύθυνση Email *" value={form.email} onChange={handleChange} />
                     <button
                       type="submit"
                       disabled={status === 'sending'}
@@ -90,14 +70,11 @@ export default function Footer({ contact = DEFAULT_CONTACT }) {
             </div>
           </div>
 
-          {/* Правая часть — 30%, картинка как фон, без отступов */}
           <div className="hidden md:block md:w-[30%] md:min-h-[450px] md:bg-cover md:bg-center md:bg-no-repeat" 
-               style={{ backgroundImage: `url('/images/Background.png')` }}>
-          </div>
+               style={{ backgroundImage: `url('/images/Background.png')` }} />
         </div>
       </div>
 
-      {/* Нижняя полоса */}
       <div className="relative border-t border-white/10 bg-[#19272B]">
         <div className="mx-auto flex max-w-[1400px] flex-col items-center gap-4 px-4 py-6 text-xs text-white/80 sm:px-6 md:flex-row md:justify-between">
           <div className="flex items-center gap-3 order-1">
@@ -118,16 +95,10 @@ export default function Footer({ contact = DEFAULT_CONTACT }) {
 
           <div className="order-2 flex flex-col items-center gap-1 text-center md:order-3 md:items-end md:text-right">
             <div className="flex gap-4">
-              <a href="#" className="hover:text-white">
-                Πολιτική Cookies
-              </a>
-              <a href="#" className="hover:text-white">
-                Όροι Χρήσης
-              </a>
+              <a href="#" className="hover:text-white">Πολιτική Cookies</a>
+              <a href="#" className="hover:text-white">Όροι Χρήσης</a>
             </div>
-            <a href="#" className="hover:text-white">
-              Προσωπικά Δεδομένα
-            </a>
+            <a href="#" className="hover:text-white">Προσωπικά Δεδομένα</a>
           </div>
         </div>
       </div>
@@ -135,19 +106,11 @@ export default function Footer({ contact = DEFAULT_CONTACT }) {
   );
 }
 
-const DEFAULT_CONTACT = {
-  address: 'Ποσειδώνος 71, Θεσσαλονίκη Πυλαία, 55535',
-  email: 'info@dotsoft.gr',
-  phone: '+30 2310 500181',
-  fax: '+30 2310 551844',
-  gemh: '059277904000',
-};
-
 function ContactRow({ icon, children }) {
   return (
     <li className="flex items-start gap-3">
       <span className="mt-0.5 text-[#7ac142]">{icon}</span>
-      <span>{children}</span>
+      <span className="text-[#ffffff]">{children}</span>
     </li>
   );
 }
@@ -164,11 +127,7 @@ function FooterInput(props) {
 
 function SocialIcon({ href, label, children }) {
   return (
-    <a
-      href={href}
-      aria-label={label}
-      className="flex items-center justify-center rounded-full transition hover:scale-110 hover:opacity-80"
-    >
+    <a href={href} aria-label={label} className="flex items-center justify-center rounded-full transition hover:scale-110 hover:opacity-80">
       {children}
     </a>
   );

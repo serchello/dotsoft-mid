@@ -11,8 +11,8 @@
   --line: rgba(255, 255, 255, 0.08);
   --line-strong: rgba(255, 255, 255, 0.16);
   --text-primary: #eef3f0;
-  --text-secondary: #a8bab2;
-  --text-muted: #6f8a80;
+  --text-secondary: #3d3d3d;
+  --text-muted: #505e59;
   --accent: #5be7a9; /* сигнальный зелёный по умолчанию, переопределяется JS-переменной --accent-live */
   --accent-dim: rgba(91, 231, 169, 0.16);
   --accent-live: var(--accent);
@@ -30,6 +30,7 @@
 
 * {
   box-sizing: border-box;
+  color: #000;
 }
 
 html,

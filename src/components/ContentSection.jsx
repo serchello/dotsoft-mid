@@ -1,48 +1,28 @@
-/**
- * Основной текст услуги — светлая секция (белый фон), как на dotsoft.gr:
- * один читаемый столбец ~760px, тёмно-бирюзовые заголовки, обычный текст графитовый,
- * жирные акценты (услуга, ключевые фразы) чуть темнее — как в HTML из WP (<strong>).
- */
 export default function ContentSection({ bodyHtml, pdfUrl }) {
   return (
-    <section id="details" className="bg-white">
-      <div className="mx-auto max-w-[760px] px-4 py-14 sm:px-6 sm:py-16">
-        <article
-          className="dotsoft-prose"
-          // Контент приходит из WordPress REST API (доверенный источник — dotsoft.gr).
-          dangerouslySetInnerHTML={{ __html: bodyHtml }}
+    <section className="py-16 bg-white">
+      <div className="container mx-auto max-w-4xl px-4">
+        <div 
+          className="prose prose-lg max-w-none"
+          dangerouslySetInnerHTML={{ __html: bodyHtml || '' }} 
         />
-
+        
         {pdfUrl && (
-          <a
-            href={pdfUrl}
-            target="_blank"
-            rel="noreferrer"
-            className="mt-8 inline-flex items-center gap-2 text-sm font-medium text-dotsoft-green hover:underline"
-          >
-            ↓ Κατεβάστε το φυλλάδιο
-          </a>
+          <div className="mt-8 text-center">
+            <a 
+              href={pdfUrl} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-[#7ac142] text-white rounded-lg hover:bg-[#6ab038] transition-colors"
+            >
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              Κατεβάστε το φυλλάδιο
+            </a>
+          </div>
         )}
       </div>
-
-      {/* Локальные стили для контента, вставляемого через dangerouslySetInnerHTML —
-          там нет доступа к className, поэтому таргетимся через родительский класс. */}
-      <style>{`
-        .dotsoft-prose { color: #3b4a4a; font-size: 15px; line-height: 1.75; }
-        .dotsoft-prose p { margin: 0 0 14px; }
-        .dotsoft-prose strong { color: #12302a; font-weight: 700; }
-        .dotsoft-prose em { color: #2f8f5e; font-style: italic; }
-        .dotsoft-prose h2 {
-          color: #12302a; font-weight: 700; font-size: 20px; line-height: 1.4;
-          margin: 32px 0 14px; font-family: 'Space Grotesk', sans-serif;
-        }
-        .dotsoft-prose h2:first-child { margin-top: 0; }
-        .dotsoft-prose ul { margin: 0 0 18px; padding-left: 20px; }
-        .dotsoft-prose li { margin-bottom: 6px; }
-        .dotsoft-prose li::marker { color: #7ac142; }
-        .dotsoft-prose figure { margin: 20px 0; }
-        .dotsoft-prose figure img { border-radius: 8px; }
-      `}</style>
     </section>
   );
 }
