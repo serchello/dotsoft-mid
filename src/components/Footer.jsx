@@ -89,14 +89,14 @@ export default function Footer({ contact = {} }) {
             </SocialIcon>
           </div>
 
-          <p className="order-3 text-center md:order-2">
+          <p className="order-3 text-center md:order-2 text-[#f1ffff]">
             © Copyright DOTSOFT SA {new Date().getFullYear()}. All Rights Reserved.
           </p>
 
-          <div className="order-2 flex flex-col items-center gap-1 text-center md:order-3 md:items-end md:text-right">
+          <div className="order-2 flex flex-col items-center gap-1 text-center md:order-3 md:items-end md:text-right text-[#ffffff]">
             <div className="flex gap-4">
-              <a href="#" className="hover:text-white">Πολιτική Cookies</a>
-              <a href="#" className="hover:text-white">Όροι Χρήσης</a>
+              <a href="#" className="hover:text-white text-[#ffffff]">Πολιτική Cookies</a>
+              <a href="#" className="hover:text-white text-[#ffffff]">Όροι Χρήσης</a>
             </div>
             <a href="#" className="hover:text-white">Προσωπικά Δεδομένα</a>
           </div>
