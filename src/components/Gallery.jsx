@@ -30,7 +30,7 @@ export default function Gallery({ images, videoEmbedUrl, videoTitle, serviceLogo
             </div>
           )}
 
-          {/* Изображения - 4 колонки */}
+          {/* Изображения - 4 колонки (показываем ВСЕ изображения) */}
           {hasImages && (
             <div className={`grid grid-cols-2 sm:grid-cols-4 gap-4 ${hasVideo ? 'lg:col-span-4' : 'lg:col-span-5'}`}>
               {images.map((image, index) => (
@@ -51,12 +51,14 @@ export default function Gallery({ images, videoEmbedUrl, videoTitle, serviceLogo
           )}
         </div>
 
-        {/* Новая строка после 4 изображений */}
-        <div className="mt-8 text-center">
-          <p className="text-gray-500 text-sm">
-            {hasImages && images.length > 4 ? `+ ${images.length - 4} ακόμα φωτογραφίες` : ''}
-          </p>
-        </div>
+        {/* Строка с количеством изображений */}
+        {hasImages && images.length > 0 && (
+          <div className="mt-8 text-center">
+            <p className="text-gray-500 text-sm">
+              {images.length} φωτογραφίες
+            </p>
+          </div>
+        )}
       </div>
     </section>
   );

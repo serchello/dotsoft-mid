@@ -141,3 +141,10 @@ button {
     transition: none !important;
   }
 }
+
+
+.content-with-line-height p,
+.content-with-line-height span,
+.content-with-line-height div {
+  line-height: 1.45;
+}

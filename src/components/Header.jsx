@@ -6,7 +6,10 @@ export default function Header({ post }) {
   const title = post?.title || 'EcoCorner';
   const tagline = post?.excerpt || 'Παροχή εργασιών πεδίου';
   const quote = post?.meta?.quote || post?.header?.quote || 'Έξυπνη ανακύκλωση, καθαρές πόλεις, ενεργοί πολίτες';
-  const logoUrl = post?.meta?.service_icon_img?.url || post?.header?.logo?.url || '/images/logo_header.png';
+
+  const logoUrl = post?.header?.banner?.url || post?.header?.logo?.url || '/images/logo_header.png';
+  const logoUrl2 = post?.header?.logo?.url || '/images/logo_header.png';
+  const line = post?.header?.line?.url || '<div className="relative h-1.5 w-full bg-gradient-to-r from-[#2d7d46] via-[#7ac142] to-[#a8d84a]" />';
 
   const splitTitle = (title) => {
     if (!title) return null;
@@ -90,14 +93,13 @@ export default function Header({ post }) {
         <div className="absolute right-0 top-1/2 h-3/4 w-2/5 -translate-y-1/2 bg-gradient-to-r from-transparent via-[#7ac142]/20 to-[#7ac142]/5 blur-3xl" />
         <div className="absolute right-0 top-1/2 h-1/2 w-1/3 -translate-y-1/2 bg-gradient-to-r from-transparent to-[#f5a623]/10 blur-2xl" />
 
-        <div className="relative mx-auto flex max-w-[1400px] flex-col items-start gap-6 px-4 py-12 sm:px-6 sm:py-16 md:flex-row md:items-center md:justify-between md:py-20">
+        <div className="relative mx-auto flex max-w-[1400px] flex-col items-start gap-6 px-4 py-8 sm:px-6 sm:py-12 md:flex-row md:items-center md:justify-between md:py-14">
+          
           <div className="flex items-center gap-3 sm:gap-4">
-            <img src={logoUrl} alt={title} className="h-16 w-auto sm:h-20" />
+            <img src={logoUrl} alt={title} className="h-16 w-auto sm:h-24" />
             <div>
-              <h1 className="font-display text-3xl font-semibold text-white sm:text-4xl md:text-5xl">
-                {splitTitle(title)}
-              </h1>
-              <p className="mt-1 text-xs uppercase tracking-widest text-white/50 sm:text-sm">{tagline}</p>
+              <img src={logoUrl2} alt={title} className="h-12 w-auto sm:h-12" />
+              <p className="mt-1 text-md tracking-widest text-white/50 sm:text-md">{tagline}</p>
             </div>
           </div>
 
@@ -112,7 +114,8 @@ export default function Header({ post }) {
           )}
         </div>
 
-        <div className="relative h-1.5 w-full bg-gradient-to-r from-[#2d7d46] via-[#7ac142] to-[#a8d84a]" />
+        <img src={line} alt='line' />
+        
       </div>
     </header>
   );
