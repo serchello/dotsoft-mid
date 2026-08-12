@@ -148,3 +148,13 @@ button {
 .content-with-line-height div {
   line-height: 1.45;
 }
+
+
+.thumbs {
+    display: flex !important;
+    justify-content: center !important;
+  }
+
+
+
+

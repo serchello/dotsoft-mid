@@ -24,7 +24,7 @@ export default function Footer({ contact = {} }) {
     <footer className="relative overflow-hidden text-white">
       <div className="relative">
         <div className="flex flex-col md:flex-row">
-          <div className="w-full md:w-[70%] px-14 sm:px-16 pb-14 pt-14 bg-[#1f2e32]">
+          <div className="w-full md:w-[70%] px-14 sm:px-20 pb-6 pt-12 bg-[#1f2e32]">
             <a href="/" className="inline-flex items-center gap-2">
               <img src="/images/logo_footer.png" alt="DOTSOFT" className="h-9 w-auto" />
             </a>
@@ -76,7 +76,7 @@ export default function Footer({ contact = {} }) {
       </div>
 
       <div className="relative border-t border-white/10 bg-[#19272B]">
-        <div className="mx-auto flex max-w-[1400px] flex-col items-center gap-4 px-4 py-6 text-sm text-white/80 sm:px-6 md:flex-row md:justify-between">
+        <div className="mx-auto flex max-w-[1800px] flex-col items-center gap-4 px-4 py-6 text-sm text-white/80 sm:px-6 md:flex-row md:justify-between">
           <div className="flex items-center gap-3 order-1">
             <SocialIcon href="https://www.facebook.com/dotsoft/" label="Facebook">
               <img src="/images/svg/facebook.svg" alt="Facebook" className="h-7 w-7" />

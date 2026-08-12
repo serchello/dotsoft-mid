@@ -1,6 +1,9 @@
 import ContentBlocks from './ContentBlocks.jsx';
 
-export default function ContentSection({ blocks, bodyHtml, pdfUrl }) {
+export default function ContentSection({ blocks, bodyHtml, pdfUrl, videoUrl }) {
+
+
+
   return (
     <section className="py-2 bg-white">
       {/* Если есть blocks - используем их */}
@@ -9,9 +12,9 @@ export default function ContentSection({ blocks, bodyHtml, pdfUrl }) {
       ) : (
         /* Иначе используем bodyHtml */
         <div className="container mx-auto max-w-4xl px-4">
-          <div 
+          <div
             className="prose prose-lg max-w-none text-gray-700"
-            dangerouslySetInnerHTML={{ __html: bodyHtml || '' }} 
+            dangerouslySetInnerHTML={{ __html: bodyHtml || '' }}
           />
         </div>
       )}
@@ -19,9 +22,9 @@ export default function ContentSection({ blocks, bodyHtml, pdfUrl }) {
       {/* PDF кнопка */}
       {pdfUrl && (
         <div className="container mx-auto max-w-4xl px-4 mt-6 text-center">
-          <a 
-            href={pdfUrl} 
-            target="_blank" 
+          <a
+            href={pdfUrl}
+            target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 bg-[#7ac142] text-white rounded-lg hover:bg-[#6ab038] transition-colors"
           >
@@ -30,6 +33,23 @@ export default function ContentSection({ blocks, bodyHtml, pdfUrl }) {
             </svg>
             Κατεβάστε το φυλλάδιο
           </a>
+        </div>
+      )}
+
+      {videoUrl && (
+        <div className="max-w-4xl mx-auto px-4 py-8 space-y-6">
+          {/* <h3 className="text-2xl font-semibold text-[#7ac142] mb-4">Видео</h3> */}
+          <div className="relative w-full aspect-video rounded-lg overflow-hidden shadow-lg bg-black">
+            <iframe
+              width="100%"
+              height="100%"
+              src={videoUrl} // Сюда передаём уже embed ссылку
+              title="Video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
         </div>
       )}
     </section>
