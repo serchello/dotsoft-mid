@@ -1,105 +1,11 @@
 {
   "id": 30001,
   "type": "service",
-  "status": "publish",
-  "title": "EcoCorner",
   "slug": "ecocorner",
-  "date": "2026-02-28 14:09:11",
-  "modified": "2026-08-06 12:57:45",
-  "author_id": 1,
   "link": "https://dotsoft.gr/service/ecocorner/",
+  "title": "EcoCorner",
   "excerpt": "Έξυπνη Επιφανειακή Γωνία Ανακύκλωσης Πολλαπλών Ρευμάτων",
   "featured_image": "https://dotsoft.gr/wp-content/uploads/2026/02/EcoCorner-1.svg",
-  "terms": {
-    "service-category": [
-      {
-        "id": 49,
-        "name": "Καθαριότητα",
-        "slug": "cleaning"
-      }
-    ],
-    "translation_priority": [
-      {
-        "id": 61,
-        "name": "Προαιρετικά",
-        "slug": "%cf%80%cf%81%ce%bf%ce%b1%ce%b9%cf%81%ce%b5%cf%84%ce%b9%ce%ba%ce%ac"
-      }
-    ]
-  },
-  "meta": {
-    "rs_page_bg_color": "",
-    "pt_mode": "-1",
-    "ptitle_layout": "",
-    "service_external_link": "",
-    "service_icon_type": "image",
-    "service_icon_font": "",
-    "service_icon_img": {
-      "url": "https://dotsoft.gr/wp-content/uploads/2026/05/EcoCorner_Logo-side-menu-01.svg",
-      "id": "34239",
-      "height": "53",
-      "width": "49",
-      "thumbnail": "https://dotsoft.gr/wp-content/uploads/2026/05/EcoCorner_Logo-side-menu-01.svg"
-    },
-    "content_spacing": {
-      "units": "px",
-      "padding-top": "",
-      "padding-bottom": ""
-    },
-    "footer_layout": "-1",
-    "service_feature_list": "",
-    "project": "",
-    "banner": "26437",
-    "quote": "Έξυπνη ανακύκλωση, καθαρές πόλεις, ενεργοί πολίτες",
-    "logo": "26439",
-    "line": "26490",
-    "background": [
-      "EcoCorner"
-    ],
-    "project_title": "",
-    "links_link1": "",
-    "links_link2": "",
-    "links_link3": "",
-    "links_link4": "",
-    "links_link5": "",
-    "links": "",
-    "sib_push_meta_box_present": "1",
-    "sib_push_send_notification": "0",
-    "sib_push_send_notification_delay_seconds": null,
-    "sib_push_target_tags": null,
-    "sib_push_target_segment_ids": "@ALL",
-    "sib_push_target_brevo_segment_ids": null,
-    "sib_push_target_brevo_list_ids": null,
-    "sib_push_utm_source": null,
-    "sib_push_utm_medium": null,
-    "sib_push_utm_campaign": null,
-    "sib_push_utm_term": null,
-    "sib_push_utm_content": null,
-    "gallery": "",
-    "video": "1",
-    "docs_0_doc_link": "https://dotsoft.gr/wp-content/uploads/2026/06/ecocorner-5.pdf",
-    "docs": "1",
-    "video_0_video_link": "https://www.youtube.com/watch?v=N_W4OOudRYQ&t=13s"
-  },
-  "acf": {
-    "project": "",
-    "quote": "Έξυπνη ανακύκλωση, καθαρές πόλεις, ενεργοί πολίτες",
-    "background": [
-      "EcoCorner"
-    ],
-    "project_title": "",
-    "links": false,
-    "gallery": false,
-    "video": [
-      {
-        "video_link": "https://www.youtube.com/watch?v=N_W4OOudRYQ&t=13s"
-      }
-    ],
-    "docs": [
-      {
-        "doc_link": "https://dotsoft.gr/wp-content/uploads/2026/06/ecocorner-5.pdf"
-      }
-    ]
-  },
   "header": {
     "background_choice": "EcoCorner",
     "quote": "Έξυπνη ανακύκλωση, καθαρές πόλεις, ενεργοί πολίτες",
@@ -126,7 +32,26 @@
     },
     "gradient_css": "linear-gradient(to right, #457B3A00 0, #457B3A80 30%)"
   },
-  "parsed": {
+  "acf": {
+    "quote": "Έξυπνη ανακύκλωση, καθαρές πόλεις, ενεργοί πολίτες",
+    "background": [
+      "EcoCorner"
+    ],
+    "video": [
+      {
+        "video_link": "https://www.youtube.com/watch?v=N_W4OOudRYQ&t=13s"
+      }
+    ],
+    "docs": [
+      {
+        "doc_link": "https://dotsoft.gr/wp-content/uploads/2026/06/ecocorner-5.pdf"
+      }
+    ]
+  },
+  "content": {
+    "body": "\u003Cp style=\"text-align: justify\"\u003EΤο \u003Cstrong\u003EEcoCorner\u003C/strong\u003E είναι ένα ολοκληρωμένο σύστημα έξυπνης ανακύκλωσης που συνδυάζει προηγμένη τεχνολογία, εργονομικό σχεδιασμό και ενεργή συμμετοχή των πολιτών. Σχεδιάστηκε για να βοηθήσει Δήμους και Φορείς να αυξήσουν τα ποσοστά ανακύκλωσης, να μειώσουν το λειτουργικό κόστος και να μετατρέψουν την περιβαλλοντική πολιτική σε μετρήσιμο αποτέλεσμα.\u003C/p\u003E\n\u003Cp\u003EΤο EcoCorner είναι μια \u003Cstrong\u003Eεπιφανειακή, έξυπνη γωνιά ανακύκλωσης πολλαπλών ρευμάτων\u003C/strong\u003E, εξοπλισμένη με τεχνολογία IoT, σύστημα αναγνώρισης χρηστών και μηχανισμό επιβράβευσης.\u003C/p\u003E\n\u003Cp\u003EΚάθε σημείο EcoCorner λειτουργεί ως \u003Cstrong\u003Eκόμβος ανακύκλωσης, δεδομένων και κινήτρων\u003C/strong\u003E, προσφέροντας πλήρη εικόνα και έλεγχο στον Δήμο και πραγματικό όφελος στον πολίτη.\u003C/p\u003E\n\u003Cp\u003E”\u003Cstrong\u003EEcoCorner | Η Έξυπνη Γωνιά Ανακύκλωσης της Σύγχρονης Πόλης\u003C/strong\u003E“\u003C/p\u003E\n\u003Cp\u003E\u003Cstrong\u003EΑνακύκλωση που λειτουργεί. Ανακύκλωση που μετράει. Ανακύκλωση που επιστρέφει αξία\u003C/strong\u003E\u003C/p\u003E\n\u003Cp data-start=\"573\" data-end=\"616\"\u003EΜε το \u003Cstrong data-start=\"580\" data-end=\"593\"\u003EEcoCorner\u003C/strong\u003E, η ανακύκλωση γίνεται:\u003C/p\u003E\n\u003Cul\u003E\n\u003Cli data-start=\"619\" data-end=\"646\"\u003E\u003Cstrong data-start=\"619\" data-end=\"629\"\u003Eεύκολη\u003C/strong\u003E για τον πολίτη\u003C/li\u003E\n\u003Cli data-start=\"649\" data-end=\"678\"\u003E\u003Cstrong data-start=\"649\" data-end=\"663\"\u003Eελεγχόμενη\u003C/strong\u003E για τον Δήμο\u003C/li\u003E\n\u003Cli data-start=\"681\" data-end=\"709\"\u003E\u003Cstrong data-start=\"681\" data-end=\"697\"\u003Eανταποδοτική\u003C/strong\u003E για όλους\u003C/li\u003E\n\u003C/ul\u003E\n\u003Cp data-start=\"711\" data-end=\"822\"\u003EΈνα σύγχρονο σύστημα πολλαπλών ρευμάτων, με τεχνολογία \u003Cstrong data-start=\"766\" data-end=\"773\"\u003EIoT\u003C/strong\u003E, έξυπνη διαχείριση και \u003Cstrong data-start=\"797\" data-end=\"821\"\u003Eσύστημα επιβράβευσης\u003C/strong\u003E.\u003C/p\u003E\n\u003Cp data-start=\"711\" data-end=\"822\"\u003E \u003C/p\u003E\n\u003Cp style=\"text-align: justify\"\u003E\u003Cstrong\u003EΚύρια Χαρακτηριστικά\u003C/strong\u003E\u003C/p\u003E\n\u003Cul\u003E\n\u003Cli data-start=\"1046\" data-end=\"1117\"\u003EΑνακύκλωση πολλαπλών ρευμάτων (χαρτί, πλαστικό, μέταλλο, γυαλί κ.ά.)\u003C/li\u003E\n\u003Cli data-start=\"1120\" data-end=\"1180\"\u003EΔιαμόρφωση 2, 4 ή 6 θέσεων, ανάλογα με τις ανάγκες του χώρου\u003C/li\u003E\n\u003Cli data-start=\"1183\" data-end=\"1247\"\u003EΣτεγανή και ανθεκτική μεταλλική κατασκευή για εξωτερική χρήση\u003C/li\u003E\n\u003Cli data-start=\"1250\" data-end=\"1326\"\u003EΣύγχρονος, φιλικός σχεδιασμός για εύκολη ενσωμάτωση στο αστικό περιβάλλον\u003C/li\u003E\n\u003Cli data-start=\"1250\" data-end=\"1326\"\u003EΥποστήριξη έξυπνων αισθητήρων και συστημάτων IoT\u003C/li\u003E\n\u003Cli data-start=\"1250\" data-end=\"1326\"\u003EΠλήρως προσβάσιμη για \u003Cstrong data-start=\"1353\" data-end=\"1361\"\u003EΑμεΑ\u003C/strong\u003E, με εργονομικό ύψος και εύκολη χρήση.\u003C/li\u003E\n\u003C/ul\u003E\n\u003Cp style=\"text-align: justify\"\u003E\u003Cstrong\u003EΈξυπνη Τεχνολογία &amp; IoT\u003C/strong\u003E\u003C/p\u003E\n\u003Cp data-start=\"1419\" data-end=\"1501\"\u003EΤο EcoCorner δεν είναι απλώς ένας κάδος – είναι ένα \u003Cstrong data-start=\"1471\" data-end=\"1500\"\u003Eέξυπνο σημείο ανακύκλωσης\u003C/strong\u003E:\u003C/p\u003E\n\u003Cul\u003E\n\u003Cli data-start=\"1504\" data-end=\"1537\"\u003EΠαρακολούθηση πληρότητας κάδων\u003C/li\u003E\n\u003Cli data-start=\"1540\" data-end=\"1592\"\u003EΣυλλογή δεδομένων χρήσης και ανακυκλώσιμων υλικών\u003C/li\u003E\n\u003Cli data-start=\"1540\" data-end=\"1592\"\u003EΕιδοποιήσεις για έγκαιρη αποκομιδή\u003C/li\u003E\n\u003Cli data-start=\"1635\" data-end=\"1696\"\u003EΒελτιστοποίηση δρομολογίων και μείωση λειτουργικού κόστους\u003C/li\u003E\n\u003C/ul\u003E\n\u003Cp style=\"text-align: justify\"\u003E\u003Cstrong\u003EΕνεργοποίηση &amp; Επιβράβευση Πολιτών\u003C/strong\u003E\u003C/p\u003E\n\u003Cp data-start=\"1746\" data-end=\"1825\"\u003EΜε δυνατότητα \u003Cstrong data-start=\"1760\" data-end=\"1783\"\u003Eταυτοποίησης χρήστη\u003C/strong\u003E, το EcoCorner:\u003C/p\u003E\n\u003Cul\u003E\n\u003Cli data-start=\"1828\" data-end=\"1858\"\u003EΕνθαρρύνει τη σωστή ανακύκλωση\u003C/li\u003E\n\u003Cli data-start=\"1861\" data-end=\"1897\"\u003EΥποστηρίζει προγράμματα επιβράβευσης\u003C/li\u003E\n\u003Cli data-start=\"1900\" data-end=\"1962\"\u003EΔημιουργεί κουλτούρα συμμετοχής και περιβαλλοντικής συνείδησης\u003C/li\u003E\n\u003C/ul\u003E\n\u003Cp data-start=\"1446\" data-end=\"1502\"\u003EΤο EcoCorner \u003Cstrong data-start=\"1458\" data-end=\"1501\"\u003Eδίνει λόγο στους πολίτες να συμμετέχουν\u003C/strong\u003E.\u003C/p\u003E\n\u003Cul\u003E\n\u003Cli data-start=\"1504\" data-end=\"1661\"\u003EΠόντοι ανά κιλό ανακυκλώσιμου υλικού\u003C/li\u003E\n\u003Cli data-start=\"1504\" data-end=\"1661\"\u003EΠαρακολούθηση μέσω mobile &amp; web app\u003C/li\u003E\n\u003Cli data-start=\"1504\" data-end=\"1661\"\u003EΕξαργύρωση σε εκπτώσεις και προσφορές\u003C/li\u003E\n\u003Cli data-start=\"1504\" data-end=\"1661\"\u003EΣτήριξη της τοπικής αγοράς\u003C/li\u003E\n\u003C/ul\u003E\n\u003Cp style=\"text-align: justify\"\u003E\u003Cstrong\u003EΓιατί EcoCorner\u003C/strong\u003E\u003C/p\u003E\n\u003Cul\u003E\n\u003Cli\u003EΒελτιώνει την ποιότητα και την ποσότητα της ανακύκλωσης\u003C/li\u003E\n\u003Cli\u003EΜειώνει το κόστος αποκομιδής μέσω έξυπνης διαχείρισης\u003C/li\u003E\n\u003Cli\u003EΕνισχύει το πράσινο αποτύπωμα του οργανισμού\u003C/li\u003E\n\u003Cli\u003EΑναβαθμίζει αισθητικά και λειτουργικά τον χώρο\u003C/li\u003E\n\u003C/ul\u003E\n\u003Cp\u003E\u003Cstrong\u003EΟφέλη για τον Δήμο\u003C/strong\u003E\u003C/p\u003E\n\u003Cul\u003E\n\u003Cli\u003EΑύξηση ποσοστών ανακύκλωσης\u003C/li\u003E\n\u003Cli\u003EΜείωση κόστους αποκομιδής\u003C/li\u003E\n\u003Cli\u003EΒελτιστοποίηση δρομολογίων\u003C/li\u003E\n\u003Cli\u003EΕνεργοποίηση πολιτών\u003C/li\u003E\n\u003Cli\u003EΑναβάθμιση εικόνας “Έξυπνης Πόλης”\u003C/li\u003E\n\u003C/ul\u003E\n\u003Cp style=\"text-align: justify\"\u003E\u003Cem\u003EΤο \u003Cstrong data-start=\"280\" data-end=\"293\"\u003EEcoCorner\u003C/strong\u003E δεν είναι απλώς κάδοι ανακύκλωσης.\u003Cbr data-start=\"333\" data-end=\"336\"\u003EΕίναι ένα \u003Cstrong data-start=\"346\" data-end=\"368\"\u003Eέξυπνο οικοσύστημα\u003C/strong\u003E που μετατρέπει την ανακύκλωση σε εμπειρία, κίνητρο και όφελος – για τον πολίτη, τον Δήμο και το περιβάλλον.\u003C/em\u003E\u003C/p\u003E\n\u003Cp\u003E\t\thttps://www.youtube.com/watch?v=N_W4OOudRYQ&amp;t=13s\u003Cbr\u003E\n\t\t\t\t\t\u003Ca href=\"https://dotsoft.gr/wp-content/uploads/2026/06/ecocorner-5.pdf\" target=\"_blank\"\u003E\u003Cbr\u003E\n\t\t\t\t\t\t\t\t\tΚατεβάστε το φυλλάδιο\u003Cbr\u003E\n\t\t\t\t\t\u003C/a\u003E\u003C/p\u003E\n\u003Ch2\u003EΔείτε περισσότερα προϊόντα\u003C/h2\u003E\n\u003Ch2\u003EΧρειάζεστε περισσότερες πληροφορίες;\u003C/h2\u003E\n\u003Ch2 data-wow-delay=\"ms\"\u003E\n\t\t\t\tSubscribe &amp; get 20%  off on your first project,\u003Cbr\u003E\n                Be with us\u003Cbr\u003E\n\t\t\t\t\t\t\t\u003C/h2\u003E",
+    "text": "Το EcoCorner είναι ένα ολοκληρωμένο σύστημα έξυπνης ανακύκλωσης που συνδυάζει προηγμένη τεχνολογία, εργονομικό σχεδιασμό και ενεργή συμμετοχή των πολιτών. Σχεδιάστηκε για να βοηθήσει Δήμους και Φορείς να αυξήσουν τα ποσοστά ανακύκλωσης, να μειώσουν το λειτουργικό κόστος και να μετατρέψουν την περιβαλλοντική πολιτική σε μετρήσιμο αποτέλεσμα.\nΤο EcoCorner είναι μια επιφανειακή, έξυπνη γωνιά ανακύκλωσης πολλαπλών ρευμάτων, εξοπλισμένη με τεχνολογία IoT, σύστημα αναγνώρισης χρηστών και μηχανισμό επιβράβευσης.\nΚάθε σημείο EcoCorner λειτουργεί ως κόμβος ανακύκλωσης, δεδομένων και κινήτρων, προσφέροντας πλήρη εικόνα και έλεγχο στον Δήμο και πραγματικό όφελος στον πολίτη.\n”EcoCorner | Η Έξυπνη Γωνιά Ανακύκλωσης της Σύγχρονης Πόλης“\nΑνακύκλωση που λειτουργεί. Ανακύκλωση που μετράει. Ανακύκλωση που επιστρέφει αξία\nΜε το EcoCorner, η ανακύκλωση γίνεται:\n\nεύκολη για τον πολίτη\nελεγχόμενη για τον Δήμο\nανταποδοτική για όλους\n\nΈνα σύγχρονο σύστημα πολλαπλών ρευμάτων, με τεχνολογία IoT, έξυπνη διαχείριση και σύστημα επιβράβευσης.\n \nΚύρια Χαρακτηριστικά\n\nΑνακύκλωση πολλαπλών ρευμάτων (χαρτί, πλαστικό, μέταλλο, γυαλί κ.ά.)\nΔιαμόρφωση 2, 4 ή 6 θέσεων, ανάλογα με τις ανάγκες του χώρου\nΣτεγανή και ανθεκτική μεταλλική κατασκευή για εξωτερική χρήση\nΣύγχρονος, φιλικός σχεδιασμός για εύκολη ενσωμάτωση στο αστικό περιβάλλον\nΥποστήριξη έξυπνων αισθητήρων και συστημάτων IoT\nΠλήρως προσβάσιμη για ΑμεΑ, με εργονομικό ύψος και εύκολη χρήση.\n\nΈξυπνη Τεχνολογία &amp; IoT\nΤο EcoCorner δεν είναι απλώς ένας κάδος – είναι ένα έξυπνο σημείο ανακύκλωσης:\n\nΠαρακολούθηση πληρότητας κάδων\nΣυλλογή δεδομένων χρήσης και ανακυκλώσιμων υλικών\nΕιδοποιήσεις για έγκαιρη αποκομιδή\nΒελτιστοποίηση δρομολογίων και μείωση λειτουργικού κόστους\n\nΕνεργοποίηση &amp; Επιβράβευση Πολιτών\nΜε δυνατότητα ταυτοποίησης χρήστη, το EcoCorner:\n\nΕνθαρρύνει τη σωστή ανακύκλωση\nΥποστηρίζει προγράμματα επιβράβευσης\nΔημιουργεί κουλτούρα συμμετοχής και περιβαλλοντικής συνείδησης\n\nΤο EcoCorner δίνει λόγο στους πολίτες να συμμετέχουν.\n\nΠόντοι ανά κιλό ανακυκλώσιμου υλικού\nΠαρακολούθηση μέσω mobile &amp; web app\nΕξαργύρωση σε εκπτώσεις και προσφορές\nΣτήριξη της τοπικής αγοράς\n\nΓιατί EcoCorner\n\nΒελτιώνει την ποιότητα και την ποσότητα της ανακύκλωσης\nΜειώνει το κόστος αποκομιδής μέσω έξυπνης διαχείρισης\nΕνισχύει το πράσινο αποτύπωμα του οργανισμού\nΑναβαθμίζει αισθητικά και λειτουργικά τον χώρο\n\nΟφέλη για τον Δήμο\n\nΑύξηση ποσοστών ανακύκλωσης\nΜείωση κόστους αποκομιδής\nΒελτιστοποίηση δρομολογίων\nΕνεργοποίηση πολιτών\nΑναβάθμιση εικόνας “Έξυπνης Πόλης”\n\nΤο EcoCorner δεν είναι απλώς κάδοι ανακύκλωσης.Είναι ένα έξυπνο οικοσύστημα που μετατρέπει την ανακύκλωση σε εμπειρία, κίνητρο και όφελος – για τον πολίτη, τον Δήμο και το περιβάλλον.\n\t\thttps://www.youtube.com/watch?v=N_W4OOudRYQ&amp;t=13s\n\t\t\t\t\t\n\t\t\t\t\t\t\t\t\tΚατεβάστε το φυλλάδιο\n\t\t\t\t\t\nΔείτε περισσότερα προϊόντα\nΧρειάζεστε περισσότερες πληροφορίες;\n\n\t\t\t\tSubscribe &amp; get 20%  off on your first project,\n                Be with us",
+    "junk_removed": 3,
     "blocks": [
       {
         "type": "text",
@@ -325,411 +250,10 @@
         "html": "\u003Ch2\u003EΧρειάζεστε περισσότερες πληροφορίες;\u003C/h2\u003E"
       },
       {
-        "type": "text",
-        "html": "\u003Cp\u003E            \u003Ca href=\"#\" data-wow-delay=\"ms\" data-text=\"Επικοινωνήστε μαζί μας\"\u003E\u003Cbr\u003E\n                Επικοινωνήστε μαζί μας\u003Cbr\u003E\n                                                \u003C/a\u003E\u003C/p\u003E",
-        "text": "Επικοινωνήστε μαζί μας"
-      },
-      {
-        "type": "text",
-        "html": "\u003Cform action=\"/wp-admin/admin-ajax.php#wpcf7-f26370-o1\" method=\"post\" aria-label=\"Contact form\" novalidate=\"novalidate\" data-status=\"init\"\u003E\n\u003Cfieldset\u003E\u003Cinput type=\"hidden\" name=\"_wpcf7\" value=\"26370\"\u003E\u003Cinput type=\"hidden\" name=\"_wpcf7_version\" value=\"6.1.6\"\u003E\u003Cinput type=\"hidden\" name=\"_wpcf7_locale\" value=\"en_US\"\u003E\u003Cinput type=\"hidden\" name=\"_wpcf7_unit_tag\" value=\"wpcf7-f26370-o1\"\u003E\u003Cinput type=\"hidden\" name=\"_wpcf7_container_post\" value=\"0\"\u003E\u003Cinput type=\"hidden\" name=\"_wpcf7_posted_data_hash\" value=\"\"\u003E\u003Cbr\u003E\n\u003C/fieldset\u003E\n\u003Cp\u003E\u003Cinput size=\"40\" maxlength=\"400\" id=\"your-subject\" aria-required=\"true\" aria-invalid=\"false\" placeholder=\"EcoCorner\" value=\"\" type=\"text\" name=\"your-subject\"\u003E\n\t\t\u003C/p\u003E\n\u003Cp\u003E\u003Cinput size=\"40\" maxlength=\"400\" autocomplete=\"text\" aria-required=\"true\" aria-invalid=\"false\" placeholder=\"ΟΝΟΜΑΤΕΠΩΝΥΜΟ*\" value=\"\" type=\"text\" name=\"your-name\"\u003E\n\t\t\u003C/p\u003E\n\u003Cp\u003E\u003Cinput size=\"40\" maxlength=\"400\" aria-required=\"true\" aria-invalid=\"false\" placeholder=\"ΦΟΡΕΑΣ*\" value=\"\" type=\"text\" name=\"your-company\"\u003E\n\t\t\u003C/p\u003E\n\u003Cp\u003E\u003Cinput size=\"40\" maxlength=\"400\" autocomplete=\"email\" aria-required=\"true\" aria-invalid=\"false\" placeholder=\"EMAIL*\" value=\"\" type=\"email\" name=\"your-email\"\u003E\n\t\t\u003C/p\u003E\n\u003Cp\u003E\u003Cinput size=\"40\" maxlength=\"400\" aria-required=\"true\" aria-invalid=\"false\" placeholder=\"ΤΗΛΕΦΩΝΟ*\" value=\"\" type=\"tel\" name=\"your-phone\"\u003E\n\t\t\u003C/p\u003E\n\u003Cp\u003E\u003Ctextarea cols=\"40\" rows=\"12\" maxlength=\"2000\" aria-required=\"true\" aria-invalid=\"false\" placeholder=\"ΜΗΝΥΜΑ*\" name=\"your-message\"\u003E\u003C/textarea\u003E\n\t\t\u003C/p\u003E\n\u003Cp\u003E\u003Csmall\u003E\u003Cbr\u003E\n(Τα πεδία με * είναι υποχρεωτικά)\u003Cbr\u003E\n\u003C/small\u003E\n\t\t\u003C/p\u003E\n\u003Cp\u003E\u003Cbutton type=\"submit\"\u003E\u003Cbr\u003E\nΑποστολή\u003C/button\u003E\u003C/p\u003E\n\u003Cp\u003E\n\t\t\u003C/p\u003E\n\u003C/form\u003E",
-        "text": "(Τα πεδία με * είναι υποχρεωτικά)\n\n\t\t\n\nΑποστολή"
-      },
-      {
         "type": "heading",
         "level": 2,
         "text": "Subscribe & get 20%  off on your first project,\n                Be with us",
         "html": "\u003Ch2 data-wow-delay=\"ms\"\u003E\n\t\t\t\tSubscribe &amp; get 20%  off on your first project,\u003Cbr\u003E\n                Be with us\u003Cbr\u003E\n\t\t\t\t\t\t\t\u003C/h2\u003E"
-      },
-      {
-        "type": "text",
-        "html": "\u003Cform action=\"/wp-admin/admin-ajax.php#wpcf7-f14731-o2\" method=\"post\" aria-label=\"Contact form\" novalidate=\"novalidate\" data-status=\"init\"\u003E\n\u003Cfieldset\u003E\u003Cinput type=\"hidden\" name=\"_wpcf7\" value=\"14731\"\u003E\u003Cinput type=\"hidden\" name=\"_wpcf7_version\" value=\"6.1.6\"\u003E\u003Cinput type=\"hidden\" name=\"_wpcf7_locale\" value=\"en_US\"\u003E\u003Cinput type=\"hidden\" name=\"_wpcf7_unit_tag\" value=\"wpcf7-f14731-o2\"\u003E\u003Cinput type=\"hidden\" name=\"_wpcf7_container_post\" value=\"0\"\u003E\u003Cinput type=\"hidden\" name=\"_wpcf7_posted_data_hash\" value=\"\"\u003E\u003Cbr\u003E\n\u003C/fieldset\u003E\n\u003Cp\u003E\u003Cinput size=\"40\" maxlength=\"400\" autocomplete=\"email\" aria-required=\"true\" aria-invalid=\"false\" placeholder=\"Enter your email address\" value=\"\" type=\"email\" name=\"your-email\"\u003E\u003Cbr\u003E\n\u003Cbutton type=\"submit\"\u003ESubmit\u003C/button\u003E\n\t\u003C/p\u003E\n\u003C/form\u003E",
-        "text": "Submit"
-      }
-    ],
-    "sections": [
-      {
-        "heading": null,
-        "blocks": [
-          {
-            "type": "text",
-            "html": "\u003Cp style=\"text-align: justify\"\u003EΤο \u003Cstrong\u003EEcoCorner\u003C/strong\u003E είναι ένα ολοκληρωμένο σύστημα έξυπνης ανακύκλωσης που συνδυάζει προηγμένη τεχνολογία, εργονομικό σχεδιασμό και ενεργή συμμετοχή των πολιτών. Σχεδιάστηκε για να βοηθήσει Δήμους και Φορείς να αυξήσουν τα ποσοστά ανακύκλωσης, να μειώσουν το λειτουργικό κόστος και να μετατρέψουν την περιβαλλοντική πολιτική σε μετρήσιμο αποτέλεσμα.\u003C/p\u003E",
-            "text": "Το EcoCorner είναι ένα ολοκληρωμένο σύστημα έξυπνης ανακύκλωσης που συνδυάζει προηγμένη τεχνολογία, εργονομικό σχεδιασμό και ενεργή συμμετοχή των πολιτών. Σχεδιάστηκε για να βοηθήσει Δήμους και Φορείς να αυξήσουν τα ποσοστά ανακύκλωσης, να μειώσουν το λειτουργικό κόστος και να μετατρέψουν την περιβαλλοντική πολιτική σε μετρήσιμο αποτέλεσμα."
-          },
-          {
-            "type": "text",
-            "html": "\u003Cp\u003EΤο EcoCorner είναι μια \u003Cstrong\u003Eεπιφανειακή, έξυπνη γωνιά ανακύκλωσης πολλαπλών ρευμάτων\u003C/strong\u003E, εξοπλισμένη με τεχνολογία IoT, σύστημα αναγνώρισης χρηστών και μηχανισμό επιβράβευσης.\u003C/p\u003E",
-            "text": "Το EcoCorner είναι μια επιφανειακή, έξυπνη γωνιά ανακύκλωσης πολλαπλών ρευμάτων, εξοπλισμένη με τεχνολογία IoT, σύστημα αναγνώρισης χρηστών και μηχανισμό επιβράβευσης."
-          },
-          {
-            "type": "text",
-            "html": "\u003Cp\u003EΚάθε σημείο EcoCorner λειτουργεί ως \u003Cstrong\u003Eκόμβος ανακύκλωσης, δεδομένων και κινήτρων\u003C/strong\u003E, προσφέροντας πλήρη εικόνα και έλεγχο στον Δήμο και πραγματικό όφελος στον πολίτη.\u003C/p\u003E",
-            "text": "Κάθε σημείο EcoCorner λειτουργεί ως κόμβος ανακύκλωσης, δεδομένων και κινήτρων, προσφέροντας πλήρη εικόνα και έλεγχο στον Δήμο και πραγματικό όφελος στον πολίτη."
-          },
-          {
-            "type": "text",
-            "html": "\u003Cp\u003E”\u003Cstrong\u003EEcoCorner | Η Έξυπνη Γωνιά Ανακύκλωσης της Σύγχρονης Πόλης\u003C/strong\u003E“\u003C/p\u003E",
-            "text": "”EcoCorner | Η Έξυπνη Γωνιά Ανακύκλωσης της Σύγχρονης Πόλης“"
-          },
-          {
-            "type": "text",
-            "html": "\u003Cp\u003E\u003Cstrong\u003EΑνακύκλωση που λειτουργεί. Ανακύκλωση που μετράει. Ανακύκλωση που επιστρέφει αξία\u003C/strong\u003E\u003C/p\u003E",
-            "text": "Ανακύκλωση που λειτουργεί. Ανακύκλωση που μετράει. Ανακύκλωση που επιστρέφει αξία"
-          },
-          {
-            "type": "text",
-            "html": "\u003Cp data-start=\"573\" data-end=\"616\"\u003EΜε το \u003Cstrong data-start=\"580\" data-end=\"593\"\u003EEcoCorner\u003C/strong\u003E, η ανακύκλωση γίνεται:\u003C/p\u003E",
-            "text": "Με το EcoCorner, η ανακύκλωση γίνεται:"
-          },
-          {
-            "type": "list",
-            "style": "ul",
-            "items": [
-              "εύκολη για τον πολίτη",
-              "ελεγχόμενη για τον Δήμο",
-              "ανταποδοτική για όλους"
-            ],
-            "html": "\u003Cul\u003E\n\u003Cli data-start=\"619\" data-end=\"646\"\u003E\u003Cstrong data-start=\"619\" data-end=\"629\"\u003Eεύκολη\u003C/strong\u003E για τον πολίτη\u003C/li\u003E\n\u003Cli data-start=\"649\" data-end=\"678\"\u003E\u003Cstrong data-start=\"649\" data-end=\"663\"\u003Eελεγχόμενη\u003C/strong\u003E για τον Δήμο\u003C/li\u003E\n\u003Cli data-start=\"681\" data-end=\"709\"\u003E\u003Cstrong data-start=\"681\" data-end=\"697\"\u003Eανταποδοτική\u003C/strong\u003E για όλους\u003C/li\u003E\n\u003C/ul\u003E"
-          },
-          {
-            "type": "text",
-            "html": "\u003Cp data-start=\"711\" data-end=\"822\"\u003EΈνα σύγχρονο σύστημα πολλαπλών ρευμάτων, με τεχνολογία \u003Cstrong data-start=\"766\" data-end=\"773\"\u003EIoT\u003C/strong\u003E, έξυπνη διαχείριση και \u003Cstrong data-start=\"797\" data-end=\"821\"\u003Eσύστημα επιβράβευσης\u003C/strong\u003E.\u003C/p\u003E",
-            "text": "Ένα σύγχρονο σύστημα πολλαπλών ρευμάτων, με τεχνολογία IoT, έξυπνη διαχείριση και σύστημα επιβράβευσης."
-          },
-          {
-            "type": "text",
-            "html": "\u003Cp data-start=\"711\" data-end=\"822\"\u003E \u003C/p\u003E",
-            "text": " "
-          },
-          {
-            "type": "text",
-            "html": "\u003Cp style=\"text-align: justify\"\u003E\u003Cstrong\u003EΚύρια Χαρακτηριστικά\u003C/strong\u003E\u003C/p\u003E",
-            "text": "Κύρια Χαρακτηριστικά"
-          },
-          {
-            "type": "list",
-            "style": "ul",
-            "items": [
-              "Ανακύκλωση πολλαπλών ρευμάτων (χαρτί, πλαστικό, μέταλλο, γυαλί κ.ά.)",
-              "Διαμόρφωση 2, 4 ή 6 θέσεων, ανάλογα με τις ανάγκες του χώρου",
-              "Στεγανή και ανθεκτική μεταλλική κατασκευή για εξωτερική χρήση",
-              "Σύγχρονος, φιλικός σχεδιασμός για εύκολη ενσωμάτωση στο αστικό περιβάλλον",
-              "Υποστήριξη έξυπνων αισθητήρων και συστημάτων IoT",
-              "Πλήρως προσβάσιμη για ΑμεΑ, με εργονομικό ύψος και εύκολη χρήση."
-            ],
-            "html": "\u003Cul\u003E\n\u003Cli data-start=\"1046\" data-end=\"1117\"\u003EΑνακύκλωση πολλαπλών ρευμάτων (χαρτί, πλαστικό, μέταλλο, γυαλί κ.ά.)\u003C/li\u003E\n\u003Cli data-start=\"1120\" data-end=\"1180\"\u003EΔιαμόρφωση 2, 4 ή 6 θέσεων, ανάλογα με τις ανάγκες του χώρου\u003C/li\u003E\n\u003Cli data-start=\"1183\" data-end=\"1247\"\u003EΣτεγανή και ανθεκτική μεταλλική κατασκευή για εξωτερική χρήση\u003C/li\u003E\n\u003Cli data-start=\"1250\" data-end=\"1326\"\u003EΣύγχρονος, φιλικός σχεδιασμός για εύκολη ενσωμάτωση στο αστικό περιβάλλον\u003C/li\u003E\n\u003Cli data-start=\"1250\" data-end=\"1326\"\u003EΥποστήριξη έξυπνων αισθητήρων και συστημάτων IoT\u003C/li\u003E\n\u003Cli data-start=\"1250\" data-end=\"1326\"\u003EΠλήρως προσβάσιμη για \u003Cstrong data-start=\"1353\" data-end=\"1361\"\u003EΑμεΑ\u003C/strong\u003E, με εργονομικό ύψος και εύκολη χρήση.\u003C/li\u003E\n\u003C/ul\u003E"
-          },
-          {
-            "type": "text",
-            "html": "\u003Cp style=\"text-align: justify\"\u003E\u003Cstrong\u003EΈξυπνη Τεχνολογία &amp; IoT\u003C/strong\u003E\u003C/p\u003E",
-            "text": "Έξυπνη Τεχνολογία & IoT"
-          },
-          {
-            "type": "text",
-            "html": "\u003Cp data-start=\"1419\" data-end=\"1501\"\u003EΤο EcoCorner δεν είναι απλώς ένας κάδος – είναι ένα \u003Cstrong data-start=\"1471\" data-end=\"1500\"\u003Eέξυπνο σημείο ανακύκλωσης\u003C/strong\u003E:\u003C/p\u003E",
-            "text": "Το EcoCorner δεν είναι απλώς ένας κάδος – είναι ένα έξυπνο σημείο ανακύκλωσης:"
-          },
-          {
-            "type": "list",
-            "style": "ul",
-            "items": [
-              "Παρακολούθηση πληρότητας κάδων",
-              "Συλλογή δεδομένων χρήσης και ανακυκλώσιμων υλικών",
-              "Ειδοποιήσεις για έγκαιρη αποκομιδή",
-              "Βελτιστοποίηση δρομολογίων και μείωση λειτουργικού κόστους"
-            ],
-            "html": "\u003Cul\u003E\n\u003Cli data-start=\"1504\" data-end=\"1537\"\u003EΠαρακολούθηση πληρότητας κάδων\u003C/li\u003E\n\u003Cli data-start=\"1540\" data-end=\"1592\"\u003EΣυλλογή δεδομένων χρήσης και ανακυκλώσιμων υλικών\u003C/li\u003E\n\u003Cli data-start=\"1540\" data-end=\"1592\"\u003EΕιδοποιήσεις για έγκαιρη αποκομιδή\u003C/li\u003E\n\u003Cli data-start=\"1635\" data-end=\"1696\"\u003EΒελτιστοποίηση δρομολογίων και μείωση λειτουργικού κόστους\u003C/li\u003E\n\u003C/ul\u003E"
-          },
-          {
-            "type": "text",
-            "html": "\u003Cp style=\"text-align: justify\"\u003E\u003Cstrong\u003EΕνεργοποίηση &amp; Επιβράβευση Πολιτών\u003C/strong\u003E\u003C/p\u003E",
-            "text": "Ενεργοποίηση & Επιβράβευση Πολιτών"
-          },
-          {
-            "type": "text",
-            "html": "\u003Cp data-start=\"1746\" data-end=\"1825\"\u003EΜε δυνατότητα \u003Cstrong data-start=\"1760\" data-end=\"1783\"\u003Eταυτοποίησης χρήστη\u003C/strong\u003E, το EcoCorner:\u003C/p\u003E",
-            "text": "Με δυνατότητα ταυτοποίησης χρήστη, το EcoCorner:"
-          },
-          {
-            "type": "list",
-            "style": "ul",
-            "items": [
-              "Ενθαρρύνει τη σωστή ανακύκλωση",
-              "Υποστηρίζει προγράμματα επιβράβευσης",
-              "Δημιουργεί κουλτούρα συμμετοχής και περιβαλλοντικής συνείδησης"
-            ],
-            "html": "\u003Cul\u003E\n\u003Cli data-start=\"1828\" data-end=\"1858\"\u003EΕνθαρρύνει τη σωστή ανακύκλωση\u003C/li\u003E\n\u003Cli data-start=\"1861\" data-end=\"1897\"\u003EΥποστηρίζει προγράμματα επιβράβευσης\u003C/li\u003E\n\u003Cli data-start=\"1900\" data-end=\"1962\"\u003EΔημιουργεί κουλτούρα συμμετοχής και περιβαλλοντικής συνείδησης\u003C/li\u003E\n\u003C/ul\u003E"
-          },
-          {
-            "type": "text",
-            "html": "\u003Cp data-start=\"1446\" data-end=\"1502\"\u003EΤο EcoCorner \u003Cstrong data-start=\"1458\" data-end=\"1501\"\u003Eδίνει λόγο στους πολίτες να συμμετέχουν\u003C/strong\u003E.\u003C/p\u003E",
-            "text": "Το EcoCorner δίνει λόγο στους πολίτες να συμμετέχουν."
-          },
-          {
-            "type": "list",
-            "style": "ul",
-            "items": [
-              "Πόντοι ανά κιλό ανακυκλώσιμου υλικού",
-              "Παρακολούθηση μέσω mobile & web app",
-              "Εξαργύρωση σε εκπτώσεις και προσφορές",
-              "Στήριξη της τοπικής αγοράς"
-            ],
-            "html": "\u003Cul\u003E\n\u003Cli data-start=\"1504\" data-end=\"1661\"\u003EΠόντοι ανά κιλό ανακυκλώσιμου υλικού\u003C/li\u003E\n\u003Cli data-start=\"1504\" data-end=\"1661\"\u003EΠαρακολούθηση μέσω mobile &amp; web app\u003C/li\u003E\n\u003Cli data-start=\"1504\" data-end=\"1661\"\u003EΕξαργύρωση σε εκπτώσεις και προσφορές\u003C/li\u003E\n\u003Cli data-start=\"1504\" data-end=\"1661\"\u003EΣτήριξη της τοπικής αγοράς\u003C/li\u003E\n\u003C/ul\u003E"
-          },
-          {
-            "type": "text",
-            "html": "\u003Cp style=\"text-align: justify\"\u003E\u003Cstrong\u003EΓιατί EcoCorner\u003C/strong\u003E\u003C/p\u003E",
-            "text": "Γιατί EcoCorner"
-          },
-          {
-            "type": "list",
-            "style": "ul",
-            "items": [
-              "Βελτιώνει την ποιότητα και την ποσότητα της ανακύκλωσης",
-              "Μειώνει το κόστος αποκομιδής μέσω έξυπνης διαχείρισης",
-              "Ενισχύει το πράσινο αποτύπωμα του οργανισμού",
-              "Αναβαθμίζει αισθητικά και λειτουργικά τον χώρο"
-            ],
-            "html": "\u003Cul\u003E\n\u003Cli\u003EΒελτιώνει την ποιότητα και την ποσότητα της ανακύκλωσης\u003C/li\u003E\n\u003Cli\u003EΜειώνει το κόστος αποκομιδής μέσω έξυπνης διαχείρισης\u003C/li\u003E\n\u003Cli\u003EΕνισχύει το πράσινο αποτύπωμα του οργανισμού\u003C/li\u003E\n\u003Cli\u003EΑναβαθμίζει αισθητικά και λειτουργικά τον χώρο\u003C/li\u003E\n\u003C/ul\u003E"
-          },
-          {
-            "type": "text",
-            "html": "\u003Cp\u003E\u003Cstrong\u003EΟφέλη για τον Δήμο\u003C/strong\u003E\u003C/p\u003E",
-            "text": "Οφέλη για τον Δήμο"
-          },
-          {
-            "type": "list",
-            "style": "ul",
-            "items": [
-              "Αύξηση ποσοστών ανακύκλωσης",
-              "Μείωση κόστους αποκομιδής",
-              "Βελτιστοποίηση δρομολογίων",
-              "Ενεργοποίηση πολιτών",
-              "Αναβάθμιση εικόνας “Έξυπνης Πόλης”"
-            ],
-            "html": "\u003Cul\u003E\n\u003Cli\u003EΑύξηση ποσοστών ανακύκλωσης\u003C/li\u003E\n\u003Cli\u003EΜείωση κόστους αποκομιδής\u003C/li\u003E\n\u003Cli\u003EΒελτιστοποίηση δρομολογίων\u003C/li\u003E\n\u003Cli\u003EΕνεργοποίηση πολιτών\u003C/li\u003E\n\u003Cli\u003EΑναβάθμιση εικόνας “Έξυπνης Πόλης”\u003C/li\u003E\n\u003C/ul\u003E"
-          },
-          {
-            "type": "text",
-            "html": "\u003Cp style=\"text-align: justify\"\u003E\u003Cem\u003EΤο \u003Cstrong data-start=\"280\" data-end=\"293\"\u003EEcoCorner\u003C/strong\u003E δεν είναι απλώς κάδοι ανακύκλωσης.\u003Cbr data-start=\"333\" data-end=\"336\"\u003EΕίναι ένα \u003Cstrong data-start=\"346\" data-end=\"368\"\u003Eέξυπνο οικοσύστημα\u003C/strong\u003E που μετατρέπει την ανακύκλωση σε εμπειρία, κίνητρο και όφελος – για τον πολίτη, τον Δήμο και το περιβάλλον.\u003C/em\u003E\u003C/p\u003E",
-            "text": "Το EcoCorner δεν είναι απλώς κάδοι ανακύκλωσης.Είναι ένα έξυπνο οικοσύστημα που μετατρέπει την ανακύκλωση σε εμπειρία, κίνητρο και όφελος – για τον πολίτη, τον Δήμο και το περιβάλλον."
-          },
-          {
-            "type": "text",
-            "html": "\u003Cp\u003E\t\thttps://www.youtube.com/watch?v=N_W4OOudRYQ&amp;t=13s\u003Cbr\u003E\n\t\t\t\t\t\u003Ca href=\"https://dotsoft.gr/wp-content/uploads/2026/06/ecocorner-5.pdf\" target=\"_blank\"\u003E\u003Cbr\u003E\n\t\t\t\t\t\t\t\t\tΚατεβάστε το φυλλάδιο\u003Cbr\u003E\n\t\t\t\t\t\u003C/a\u003E\u003C/p\u003E",
-            "text": "https://www.youtube.com/watch?v=N_W4OOudRYQ&t=13s\n\t\t\t\t\t\n\t\t\t\t\t\t\t\t\tΚατεβάστε το φυλλάδιο"
-          },
-          {
-            "type": "image",
-            "src": "https://dotsoft.gr/wp-content/uploads/2026/02/ecocorner-5-01-600x845.jpg",
-            "alt": "ecocorner 5-01",
-            "caption": "",
-            "width": null,
-            "height": null
-          },
-          {
-            "type": "image",
-            "src": "https://dotsoft.gr/wp-content/uploads/2026/02/ecocorner-5-02-600x845.jpg",
-            "alt": "ecocorner 5-02",
-            "caption": "",
-            "width": null,
-            "height": null
-          }
-        ]
-      },
-      {
-        "heading": {
-          "level": 2,
-          "text": "Δείτε περισσότερα προϊόντα"
-        },
-        "blocks": []
-      },
-      {
-        "heading": {
-          "level": 2,
-          "text": "Χρειάζεστε περισσότερες πληροφορίες;"
-        },
-        "blocks": [
-          {
-            "type": "text",
-            "html": "\u003Cp\u003E            \u003Ca href=\"#\" data-wow-delay=\"ms\" data-text=\"Επικοινωνήστε μαζί μας\"\u003E\u003Cbr\u003E\n                Επικοινωνήστε μαζί μας\u003Cbr\u003E\n                                                \u003C/a\u003E\u003C/p\u003E",
-            "text": "Επικοινωνήστε μαζί μας"
-          },
-          {
-            "type": "text",
-            "html": "\u003Cform action=\"/wp-admin/admin-ajax.php#wpcf7-f26370-o1\" method=\"post\" aria-label=\"Contact form\" novalidate=\"novalidate\" data-status=\"init\"\u003E\n\u003Cfieldset\u003E\u003Cinput type=\"hidden\" name=\"_wpcf7\" value=\"26370\"\u003E\u003Cinput type=\"hidden\" name=\"_wpcf7_version\" value=\"6.1.6\"\u003E\u003Cinput type=\"hidden\" name=\"_wpcf7_locale\" value=\"en_US\"\u003E\u003Cinput type=\"hidden\" name=\"_wpcf7_unit_tag\" value=\"wpcf7-f26370-o1\"\u003E\u003Cinput type=\"hidden\" name=\"_wpcf7_container_post\" value=\"0\"\u003E\u003Cinput type=\"hidden\" name=\"_wpcf7_posted_data_hash\" value=\"\"\u003E\u003Cbr\u003E\n\u003C/fieldset\u003E\n\u003Cp\u003E\u003Cinput size=\"40\" maxlength=\"400\" id=\"your-subject\" aria-required=\"true\" aria-invalid=\"false\" placeholder=\"EcoCorner\" value=\"\" type=\"text\" name=\"your-subject\"\u003E\n\t\t\u003C/p\u003E\n\u003Cp\u003E\u003Cinput size=\"40\" maxlength=\"400\" autocomplete=\"text\" aria-required=\"true\" aria-invalid=\"false\" placeholder=\"ΟΝΟΜΑΤΕΠΩΝΥΜΟ*\" value=\"\" type=\"text\" name=\"your-name\"\u003E\n\t\t\u003C/p\u003E\n\u003Cp\u003E\u003Cinput size=\"40\" maxlength=\"400\" aria-required=\"true\" aria-invalid=\"false\" placeholder=\"ΦΟΡΕΑΣ*\" value=\"\" type=\"text\" name=\"your-company\"\u003E\n\t\t\u003C/p\u003E\n\u003Cp\u003E\u003Cinput size=\"40\" maxlength=\"400\" autocomplete=\"email\" aria-required=\"true\" aria-invalid=\"false\" placeholder=\"EMAIL*\" value=\"\" type=\"email\" name=\"your-email\"\u003E\n\t\t\u003C/p\u003E\n\u003Cp\u003E\u003Cinput size=\"40\" maxlength=\"400\" aria-required=\"true\" aria-invalid=\"false\" placeholder=\"ΤΗΛΕΦΩΝΟ*\" value=\"\" type=\"tel\" name=\"your-phone\"\u003E\n\t\t\u003C/p\u003E\n\u003Cp\u003E\u003Ctextarea cols=\"40\" rows=\"12\" maxlength=\"2000\" aria-required=\"true\" aria-invalid=\"false\" placeholder=\"ΜΗΝΥΜΑ*\" name=\"your-message\"\u003E\u003C/textarea\u003E\n\t\t\u003C/p\u003E\n\u003Cp\u003E\u003Csmall\u003E\u003Cbr\u003E\n(Τα πεδία με * είναι υποχρεωτικά)\u003Cbr\u003E\n\u003C/small\u003E\n\t\t\u003C/p\u003E\n\u003Cp\u003E\u003Cbutton type=\"submit\"\u003E\u003Cbr\u003E\nΑποστολή\u003C/button\u003E\u003C/p\u003E\n\u003Cp\u003E\n\t\t\u003C/p\u003E\n\u003C/form\u003E",
-            "text": "(Τα πεδία με * είναι υποχρεωτικά)\n\n\t\t\n\nΑποστολή"
-          }
-        ]
-      },
-      {
-        "heading": {
-          "level": 2,
-          "text": "Subscribe & get 20%  off on your first project,\n                Be with us"
-        },
-        "blocks": [
-          {
-            "type": "text",
-            "html": "\u003Cform action=\"/wp-admin/admin-ajax.php#wpcf7-f14731-o2\" method=\"post\" aria-label=\"Contact form\" novalidate=\"novalidate\" data-status=\"init\"\u003E\n\u003Cfieldset\u003E\u003Cinput type=\"hidden\" name=\"_wpcf7\" value=\"14731\"\u003E\u003Cinput type=\"hidden\" name=\"_wpcf7_version\" value=\"6.1.6\"\u003E\u003Cinput type=\"hidden\" name=\"_wpcf7_locale\" value=\"en_US\"\u003E\u003Cinput type=\"hidden\" name=\"_wpcf7_unit_tag\" value=\"wpcf7-f14731-o2\"\u003E\u003Cinput type=\"hidden\" name=\"_wpcf7_container_post\" value=\"0\"\u003E\u003Cinput type=\"hidden\" name=\"_wpcf7_posted_data_hash\" value=\"\"\u003E\u003Cbr\u003E\n\u003C/fieldset\u003E\n\u003Cp\u003E\u003Cinput size=\"40\" maxlength=\"400\" autocomplete=\"email\" aria-required=\"true\" aria-invalid=\"false\" placeholder=\"Enter your email address\" value=\"\" type=\"email\" name=\"your-email\"\u003E\u003Cbr\u003E\n\u003Cbutton type=\"submit\"\u003ESubmit\u003C/button\u003E\n\t\u003C/p\u003E\n\u003C/form\u003E",
-            "text": "Submit"
-          }
-        ]
-      }
-    ],
-    "body": "\u003Cp style=\"text-align: justify\"\u003EΤο \u003Cstrong\u003EEcoCorner\u003C/strong\u003E είναι ένα ολοκληρωμένο σύστημα έξυπνης ανακύκλωσης που συνδυάζει προηγμένη τεχνολογία, εργονομικό σχεδιασμό και ενεργή συμμετοχή των πολιτών. Σχεδιάστηκε για να βοηθήσει Δήμους και Φορείς να αυξήσουν τα ποσοστά ανακύκλωσης, να μειώσουν το λειτουργικό κόστος και να μετατρέψουν την περιβαλλοντική πολιτική σε μετρήσιμο αποτέλεσμα.\u003C/p\u003E\n\u003Cp\u003EΤο EcoCorner είναι μια \u003Cstrong\u003Eεπιφανειακή, έξυπνη γωνιά ανακύκλωσης πολλαπλών ρευμάτων\u003C/strong\u003E, εξοπλισμένη με τεχνολογία IoT, σύστημα αναγνώρισης χρηστών και μηχανισμό επιβράβευσης.\u003C/p\u003E\n\u003Cp\u003EΚάθε σημείο EcoCorner λειτουργεί ως \u003Cstrong\u003Eκόμβος ανακύκλωσης, δεδομένων και κινήτρων\u003C/strong\u003E, προσφέροντας πλήρη εικόνα και έλεγχο στον Δήμο και πραγματικό όφελος στον πολίτη.\u003C/p\u003E\n\u003Cp\u003E”\u003Cstrong\u003EEcoCorner | Η Έξυπνη Γωνιά Ανακύκλωσης της Σύγχρονης Πόλης\u003C/strong\u003E“\u003C/p\u003E\n\u003Cp\u003E\u003Cstrong\u003EΑνακύκλωση που λειτουργεί. Ανακύκλωση που μετράει. Ανακύκλωση που επιστρέφει αξία\u003C/strong\u003E\u003C/p\u003E\n\u003Cp data-start=\"573\" data-end=\"616\"\u003EΜε το \u003Cstrong data-start=\"580\" data-end=\"593\"\u003EEcoCorner\u003C/strong\u003E, η ανακύκλωση γίνεται:\u003C/p\u003E\n\u003Cul\u003E\n\u003Cli data-start=\"619\" data-end=\"646\"\u003E\u003Cstrong data-start=\"619\" data-end=\"629\"\u003Eεύκολη\u003C/strong\u003E για τον πολίτη\u003C/li\u003E\n\u003Cli data-start=\"649\" data-end=\"678\"\u003E\u003Cstrong data-start=\"649\" data-end=\"663\"\u003Eελεγχόμενη\u003C/strong\u003E για τον Δήμο\u003C/li\u003E\n\u003Cli data-start=\"681\" data-end=\"709\"\u003E\u003Cstrong data-start=\"681\" data-end=\"697\"\u003Eανταποδοτική\u003C/strong\u003E για όλους\u003C/li\u003E\n\u003C/ul\u003E\n\u003Cp data-start=\"711\" data-end=\"822\"\u003EΈνα σύγχρονο σύστημα πολλαπλών ρευμάτων, με τεχνολογία \u003Cstrong data-start=\"766\" data-end=\"773\"\u003EIoT\u003C/strong\u003E, έξυπνη διαχείριση και \u003Cstrong data-start=\"797\" data-end=\"821\"\u003Eσύστημα επιβράβευσης\u003C/strong\u003E.\u003C/p\u003E\n\u003Cp data-start=\"711\" data-end=\"822\"\u003E \u003C/p\u003E\n\u003Cp style=\"text-align: justify\"\u003E\u003Cstrong\u003EΚύρια Χαρακτηριστικά\u003C/strong\u003E\u003C/p\u003E\n\u003Cul\u003E\n\u003Cli data-start=\"1046\" data-end=\"1117\"\u003EΑνακύκλωση πολλαπλών ρευμάτων (χαρτί, πλαστικό, μέταλλο, γυαλί κ.ά.)\u003C/li\u003E\n\u003Cli data-start=\"1120\" data-end=\"1180\"\u003EΔιαμόρφωση 2, 4 ή 6 θέσεων, ανάλογα με τις ανάγκες του χώρου\u003C/li\u003E\n\u003Cli data-start=\"1183\" data-end=\"1247\"\u003EΣτεγανή και ανθεκτική μεταλλική κατασκευή για εξωτερική χρήση\u003C/li\u003E\n\u003Cli data-start=\"1250\" data-end=\"1326\"\u003EΣύγχρονος, φιλικός σχεδιασμός για εύκολη ενσωμάτωση στο αστικό περιβάλλον\u003C/li\u003E\n\u003Cli data-start=\"1250\" data-end=\"1326\"\u003EΥποστήριξη έξυπνων αισθητήρων και συστημάτων IoT\u003C/li\u003E\n\u003Cli data-start=\"1250\" data-end=\"1326\"\u003EΠλήρως προσβάσιμη για \u003Cstrong data-start=\"1353\" data-end=\"1361\"\u003EΑμεΑ\u003C/strong\u003E, με εργονομικό ύψος και εύκολη χρήση.\u003C/li\u003E\n\u003C/ul\u003E\n\u003Cp style=\"text-align: justify\"\u003E\u003Cstrong\u003EΈξυπνη Τεχνολογία &amp; IoT\u003C/strong\u003E\u003C/p\u003E\n\u003Cp data-start=\"1419\" data-end=\"1501\"\u003EΤο EcoCorner δεν είναι απλώς ένας κάδος – είναι ένα \u003Cstrong data-start=\"1471\" data-end=\"1500\"\u003Eέξυπνο σημείο ανακύκλωσης\u003C/strong\u003E:\u003C/p\u003E\n\u003Cul\u003E\n\u003Cli data-start=\"1504\" data-end=\"1537\"\u003EΠαρακολούθηση πληρότητας κάδων\u003C/li\u003E\n\u003Cli data-start=\"1540\" data-end=\"1592\"\u003EΣυλλογή δεδομένων χρήσης και ανακυκλώσιμων υλικών\u003C/li\u003E\n\u003Cli data-start=\"1540\" data-end=\"1592\"\u003EΕιδοποιήσεις για έγκαιρη αποκομιδή\u003C/li\u003E\n\u003Cli data-start=\"1635\" data-end=\"1696\"\u003EΒελτιστοποίηση δρομολογίων και μείωση λειτουργικού κόστους\u003C/li\u003E\n\u003C/ul\u003E\n\u003Cp style=\"text-align: justify\"\u003E\u003Cstrong\u003EΕνεργοποίηση &amp; Επιβράβευση Πολιτών\u003C/strong\u003E\u003C/p\u003E\n\u003Cp data-start=\"1746\" data-end=\"1825\"\u003EΜε δυνατότητα \u003Cstrong data-start=\"1760\" data-end=\"1783\"\u003Eταυτοποίησης χρήστη\u003C/strong\u003E, το EcoCorner:\u003C/p\u003E\n\u003Cul\u003E\n\u003Cli data-start=\"1828\" data-end=\"1858\"\u003EΕνθαρρύνει τη σωστή ανακύκλωση\u003C/li\u003E\n\u003Cli data-start=\"1861\" data-end=\"1897\"\u003EΥποστηρίζει προγράμματα επιβράβευσης\u003C/li\u003E\n\u003Cli data-start=\"1900\" data-end=\"1962\"\u003EΔημιουργεί κουλτούρα συμμετοχής και περιβαλλοντικής συνείδησης\u003C/li\u003E\n\u003C/ul\u003E\n\u003Cp data-start=\"1446\" data-end=\"1502\"\u003EΤο EcoCorner \u003Cstrong data-start=\"1458\" data-end=\"1501\"\u003Eδίνει λόγο στους πολίτες να συμμετέχουν\u003C/strong\u003E.\u003C/p\u003E\n\u003Cul\u003E\n\u003Cli data-start=\"1504\" data-end=\"1661\"\u003EΠόντοι ανά κιλό ανακυκλώσιμου υλικού\u003C/li\u003E\n\u003Cli data-start=\"1504\" data-end=\"1661\"\u003EΠαρακολούθηση μέσω mobile &amp; web app\u003C/li\u003E\n\u003Cli data-start=\"1504\" data-end=\"1661\"\u003EΕξαργύρωση σε εκπτώσεις και προσφορές\u003C/li\u003E\n\u003Cli data-start=\"1504\" data-end=\"1661\"\u003EΣτήριξη της τοπικής αγοράς\u003C/li\u003E\n\u003C/ul\u003E\n\u003Cp style=\"text-align: justify\"\u003E\u003Cstrong\u003EΓιατί EcoCorner\u003C/strong\u003E\u003C/p\u003E\n\u003Cul\u003E\n\u003Cli\u003EΒελτιώνει την ποιότητα και την ποσότητα της ανακύκλωσης\u003C/li\u003E\n\u003Cli\u003EΜειώνει το κόστος αποκομιδής μέσω έξυπνης διαχείρισης\u003C/li\u003E\n\u003Cli\u003EΕνισχύει το πράσινο αποτύπωμα του οργανισμού\u003C/li\u003E\n\u003Cli\u003EΑναβαθμίζει αισθητικά και λειτουργικά τον χώρο\u003C/li\u003E\n\u003C/ul\u003E\n\u003Cp\u003E\u003Cstrong\u003EΟφέλη για τον Δήμο\u003C/strong\u003E\u003C/p\u003E\n\u003Cul\u003E\n\u003Cli\u003EΑύξηση ποσοστών ανακύκλωσης\u003C/li\u003E\n\u003Cli\u003EΜείωση κόστους αποκομιδής\u003C/li\u003E\n\u003Cli\u003EΒελτιστοποίηση δρομολογίων\u003C/li\u003E\n\u003Cli\u003EΕνεργοποίηση πολιτών\u003C/li\u003E\n\u003Cli\u003EΑναβάθμιση εικόνας “Έξυπνης Πόλης”\u003C/li\u003E\n\u003C/ul\u003E\n\u003Cp style=\"text-align: justify\"\u003E\u003Cem\u003EΤο \u003Cstrong data-start=\"280\" data-end=\"293\"\u003EEcoCorner\u003C/strong\u003E δεν είναι απλώς κάδοι ανακύκλωσης.\u003Cbr data-start=\"333\" data-end=\"336\"\u003EΕίναι ένα \u003Cstrong data-start=\"346\" data-end=\"368\"\u003Eέξυπνο οικοσύστημα\u003C/strong\u003E που μετατρέπει την ανακύκλωση σε εμπειρία, κίνητρο και όφελος – για τον πολίτη, τον Δήμο και το περιβάλλον.\u003C/em\u003E\u003C/p\u003E\n\u003Cp\u003E\t\thttps://www.youtube.com/watch?v=N_W4OOudRYQ&amp;t=13s\u003Cbr\u003E\n\t\t\t\t\t\u003Ca href=\"https://dotsoft.gr/wp-content/uploads/2026/06/ecocorner-5.pdf\" target=\"_blank\"\u003E\u003Cbr\u003E\n\t\t\t\t\t\t\t\t\tΚατεβάστε το φυλλάδιο\u003Cbr\u003E\n\t\t\t\t\t\u003C/a\u003E\u003C/p\u003E\n\u003Ch2\u003EΔείτε περισσότερα προϊόντα\u003C/h2\u003E\n\u003Ch2\u003EΧρειάζεστε περισσότερες πληροφορίες;\u003C/h2\u003E\n\u003Cp\u003E            \u003Ca href=\"#\" data-wow-delay=\"ms\" data-text=\"Επικοινωνήστε μαζί μας\"\u003E\u003Cbr\u003E\n                Επικοινωνήστε μαζί μας\u003Cbr\u003E\n                                                \u003C/a\u003E\u003C/p\u003E\n\u003Cform action=\"/wp-admin/admin-ajax.php#wpcf7-f26370-o1\" method=\"post\" aria-label=\"Contact form\" novalidate=\"novalidate\" data-status=\"init\"\u003E\n\u003Cfieldset\u003E\u003Cinput type=\"hidden\" name=\"_wpcf7\" value=\"26370\"\u003E\u003Cinput type=\"hidden\" name=\"_wpcf7_version\" value=\"6.1.6\"\u003E\u003Cinput type=\"hidden\" name=\"_wpcf7_locale\" value=\"en_US\"\u003E\u003Cinput type=\"hidden\" name=\"_wpcf7_unit_tag\" value=\"wpcf7-f26370-o1\"\u003E\u003Cinput type=\"hidden\" name=\"_wpcf7_container_post\" value=\"0\"\u003E\u003Cinput type=\"hidden\" name=\"_wpcf7_posted_data_hash\" value=\"\"\u003E\u003Cbr\u003E\n\u003C/fieldset\u003E\n\u003Cp\u003E\u003Cinput size=\"40\" maxlength=\"400\" id=\"your-subject\" aria-required=\"true\" aria-invalid=\"false\" placeholder=\"EcoCorner\" value=\"\" type=\"text\" name=\"your-subject\"\u003E\n\t\t\u003C/p\u003E\n\u003Cp\u003E\u003Cinput size=\"40\" maxlength=\"400\" autocomplete=\"text\" aria-required=\"true\" aria-invalid=\"false\" placeholder=\"ΟΝΟΜΑΤΕΠΩΝΥΜΟ*\" value=\"\" type=\"text\" name=\"your-name\"\u003E\n\t\t\u003C/p\u003E\n\u003Cp\u003E\u003Cinput size=\"40\" maxlength=\"400\" aria-required=\"true\" aria-invalid=\"false\" placeholder=\"ΦΟΡΕΑΣ*\" value=\"\" type=\"text\" name=\"your-company\"\u003E\n\t\t\u003C/p\u003E\n\u003Cp\u003E\u003Cinput size=\"40\" maxlength=\"400\" autocomplete=\"email\" aria-required=\"true\" aria-invalid=\"false\" placeholder=\"EMAIL*\" value=\"\" type=\"email\" name=\"your-email\"\u003E\n\t\t\u003C/p\u003E\n\u003Cp\u003E\u003Cinput size=\"40\" maxlength=\"400\" aria-required=\"true\" aria-invalid=\"false\" placeholder=\"ΤΗΛΕΦΩΝΟ*\" value=\"\" type=\"tel\" name=\"your-phone\"\u003E\n\t\t\u003C/p\u003E\n\u003Cp\u003E\u003Ctextarea cols=\"40\" rows=\"12\" maxlength=\"2000\" aria-required=\"true\" aria-invalid=\"false\" placeholder=\"ΜΗΝΥΜΑ*\" name=\"your-message\"\u003E\u003C/textarea\u003E\n\t\t\u003C/p\u003E\n\u003Cp\u003E\u003Csmall\u003E\u003Cbr\u003E\n(Τα πεδία με * είναι υποχρεωτικά)\u003Cbr\u003E\n\u003C/small\u003E\n\t\t\u003C/p\u003E\n\u003Cp\u003E\u003Cbutton type=\"submit\"\u003E\u003Cbr\u003E\nΑποστολή\u003C/button\u003E\u003C/p\u003E\n\u003Cp\u003E\n\t\t\u003C/p\u003E\n\u003C/form\u003E\n\u003Ch2 data-wow-delay=\"ms\"\u003E\n\t\t\t\tSubscribe &amp; get 20%  off on your first project,\u003Cbr\u003E\n                Be with us\u003Cbr\u003E\n\t\t\t\t\t\t\t\u003C/h2\u003E\n\u003Cform action=\"/wp-admin/admin-ajax.php#wpcf7-f14731-o2\" method=\"post\" aria-label=\"Contact form\" novalidate=\"novalidate\" data-status=\"init\"\u003E\n\u003Cfieldset\u003E\u003Cinput type=\"hidden\" name=\"_wpcf7\" value=\"14731\"\u003E\u003Cinput type=\"hidden\" name=\"_wpcf7_version\" value=\"6.1.6\"\u003E\u003Cinput type=\"hidden\" name=\"_wpcf7_locale\" value=\"en_US\"\u003E\u003Cinput type=\"hidden\" name=\"_wpcf7_unit_tag\" value=\"wpcf7-f14731-o2\"\u003E\u003Cinput type=\"hidden\" name=\"_wpcf7_container_post\" value=\"0\"\u003E\u003Cinput type=\"hidden\" name=\"_wpcf7_posted_data_hash\" value=\"\"\u003E\u003Cbr\u003E\n\u003C/fieldset\u003E\n\u003Cp\u003E\u003Cinput size=\"40\" maxlength=\"400\" autocomplete=\"email\" aria-required=\"true\" aria-invalid=\"false\" placeholder=\"Enter your email address\" value=\"\" type=\"email\" name=\"your-email\"\u003E\u003Cbr\u003E\n\u003Cbutton type=\"submit\"\u003ESubmit\u003C/button\u003E\n\t\u003C/p\u003E\n\u003C/form\u003E",
-    "text": "Το EcoCorner είναι ένα ολοκληρωμένο σύστημα έξυπνης ανακύκλωσης που συνδυάζει προηγμένη τεχνολογία, εργονομικό σχεδιασμό και ενεργή συμμετοχή των πολιτών. Σχεδιάστηκε για να βοηθήσει Δήμους και Φορείς να αυξήσουν τα ποσοστά ανακύκλωσης, να μειώσουν το λειτουργικό κόστος και να μετατρέψουν την περιβαλλοντική πολιτική σε μετρήσιμο αποτέλεσμα.\nΤο EcoCorner είναι μια επιφανειακή, έξυπνη γωνιά ανακύκλωσης πολλαπλών ρευμάτων, εξοπλισμένη με τεχνολογία IoT, σύστημα αναγνώρισης χρηστών και μηχανισμό επιβράβευσης.\nΚάθε σημείο EcoCorner λειτουργεί ως κόμβος ανακύκλωσης, δεδομένων και κινήτρων, προσφέροντας πλήρη εικόνα και έλεγχο στον Δήμο και πραγματικό όφελος στον πολίτη.\n”EcoCorner | Η Έξυπνη Γωνιά Ανακύκλωσης της Σύγχρονης Πόλης“\nΑνακύκλωση που λειτουργεί. Ανακύκλωση που μετράει. Ανακύκλωση που επιστρέφει αξία\nΜε το EcoCorner, η ανακύκλωση γίνεται:\n\nεύκολη για τον πολίτη\nελεγχόμενη για τον Δήμο\nανταποδοτική για όλους\n\nΈνα σύγχρονο σύστημα πολλαπλών ρευμάτων, με τεχνολογία IoT, έξυπνη διαχείριση και σύστημα επιβράβευσης.\n \nΚύρια Χαρακτηριστικά\n\nΑνακύκλωση πολλαπλών ρευμάτων (χαρτί, πλαστικό, μέταλλο, γυαλί κ.ά.)\nΔιαμόρφωση 2, 4 ή 6 θέσεων, ανάλογα με τις ανάγκες του χώρου\nΣτεγανή και ανθεκτική μεταλλική κατασκευή για εξωτερική χρήση\nΣύγχρονος, φιλικός σχεδιασμός για εύκολη ενσωμάτωση στο αστικό περιβάλλον\nΥποστήριξη έξυπνων αισθητήρων και συστημάτων IoT\nΠλήρως προσβάσιμη για ΑμεΑ, με εργονομικό ύψος και εύκολη χρήση.\n\nΈξυπνη Τεχνολογία &amp; IoT\nΤο EcoCorner δεν είναι απλώς ένας κάδος – είναι ένα έξυπνο σημείο ανακύκλωσης:\n\nΠαρακολούθηση πληρότητας κάδων\nΣυλλογή δεδομένων χρήσης και ανακυκλώσιμων υλικών\nΕιδοποιήσεις για έγκαιρη αποκομιδή\nΒελτιστοποίηση δρομολογίων και μείωση λειτουργικού κόστους\n\nΕνεργοποίηση &amp; Επιβράβευση Πολιτών\nΜε δυνατότητα ταυτοποίησης χρήστη, το EcoCorner:\n\nΕνθαρρύνει τη σωστή ανακύκλωση\nΥποστηρίζει προγράμματα επιβράβευσης\nΔημιουργεί κουλτούρα συμμετοχής και περιβαλλοντικής συνείδησης\n\nΤο EcoCorner δίνει λόγο στους πολίτες να συμμετέχουν.\n\nΠόντοι ανά κιλό ανακυκλώσιμου υλικού\nΠαρακολούθηση μέσω mobile &amp; web app\nΕξαργύρωση σε εκπτώσεις και προσφορές\nΣτήριξη της τοπικής αγοράς\n\nΓιατί EcoCorner\n\nΒελτιώνει την ποιότητα και την ποσότητα της ανακύκλωσης\nΜειώνει το κόστος αποκομιδής μέσω έξυπνης διαχείρισης\nΕνισχύει το πράσινο αποτύπωμα του οργανισμού\nΑναβαθμίζει αισθητικά και λειτουργικά τον χώρο\n\nΟφέλη για τον Δήμο\n\nΑύξηση ποσοστών ανακύκλωσης\nΜείωση κόστους αποκομιδής\nΒελτιστοποίηση δρομολογίων\nΕνεργοποίηση πολιτών\nΑναβάθμιση εικόνας “Έξυπνης Πόλης”\n\nΤο EcoCorner δεν είναι απλώς κάδοι ανακύκλωσης.Είναι ένα έξυπνο οικοσύστημα που μετατρέπει την ανακύκλωση σε εμπειρία, κίνητρο και όφελος – για τον πολίτη, τον Δήμο και το περιβάλλον.\n\t\thttps://www.youtube.com/watch?v=N_W4OOudRYQ&amp;t=13s\n\t\t\t\t\t\n\t\t\t\t\t\t\t\t\tΚατεβάστε το φυλλάδιο\n\t\t\t\t\t\nΔείτε περισσότερα προϊόντα\nΧρειάζεστε περισσότερες πληροφορίες;\n            \n                Επικοινωνήστε μαζί μας\n                                                \n\n\n\n\n\t\t\n\n\t\t\n\n\t\t\n\n\t\t\n\n\t\t\n\n\t\t\n\n(Τα πεδία με * είναι υποχρεωτικά)\n\n\t\t\n\nΑποστολή\n\n\t\t\n\n\n\t\t\t\tSubscribe &amp; get 20%  off on your first project,\n                Be with us\n\t\t\t\t\t\t\t\n\n\n\n\nSubmit",
-    "videos": [],
-    "images": [
-      {
-        "src": "https://dotsoft.gr/wp-content/uploads/2026/02/ecocorner-5-01-600x845.jpg",
-        "alt": "ecocorner 5-01",
-        "caption": "",
-        "width": null,
-        "height": null
-      },
-      {
-        "src": "https://dotsoft.gr/wp-content/uploads/2026/02/ecocorner-5-02-600x845.jpg",
-        "alt": "ecocorner 5-02",
-        "caption": "",
-        "width": null,
-        "height": null
-      }
-    ],
-    "files": [
-      {
-        "url": "https://dotsoft.gr/wp-content/uploads/2026/06/ecocorner-5.pdf",
-        "name": "ecocorner-5.pdf",
-        "ext": "pdf",
-        "text": "Κατεβάστε το φυλλάδιο"
-      }
-    ],
-    "links": [
-      {
-        "url": "/?p=30001",
-        "text": "EcoCorner"
-      },
-      {
-        "url": "/?p=27000",
-        "text": "Fleeto Suite"
-      },
-      {
-        "url": "/?p=27053",
-        "text": "FleetoMonitoring"
-      },
-      {
-        "url": "/?p=27318",
-        "text": "FleetoWaste"
-      },
-      {
-        "url": "/?p=27332",
-        "text": "FleetoAnalysis"
-      },
-      {
-        "url": "/?p=26654",
-        "text": "IanosEnergy"
-      },
-      {
-        "url": "/?p=26955",
-        "text": "EasyParking"
-      },
-      {
-        "url": "/?p=26963",
-        "text": "CityPolis"
-      },
-      {
-        "url": "/?p=26992",
-        "text": "CityParking"
-      },
-      {
-        "url": "/?p=26904",
-        "text": "Act4myCity"
-      },
-      {
-        "url": "/?p=26881",
-        "text": "CityEvents"
-      },
-      {
-        "url": "/?p=26874",
-        "text": "CityExplore"
-      },
-      {
-        "url": "/?p=26891",
-        "text": "CityHeritage"
-      },
-      {
-        "url": "/?p=26463",
-        "text": "GreenSpots"
-      },
-      {
-        "url": "/?p=26954",
-        "text": "TankTrack"
-      },
-      {
-        "url": "/?p=26910",
-        "text": "TimeTrack"
-      },
-      {
-        "url": "/?p=26898",
-        "text": "DocuSoft"
-      },
-      {
-        "url": "/?p=26586",
-        "text": "CityLib"
-      },
-      {
-        "url": "/?p=26618",
-        "text": "EnergyTrack"
-      },
-      {
-        "url": "/?p=26608",
-        "text": "FirePro"
-      },
-      {
-        "url": "/?p=26602",
-        "text": "CivilPro"
-      },
-      {
-        "url": "/?p=26869",
-        "text": "PerivallonCity"
-      },
-      {
-        "url": "/?p=26861",
-        "text": "YdorCity"
-      },
-      {
-        "url": "/?p=26455",
-        "text": "CityBin"
-      },
-      {
-        "url": "/?p=26932",
-        "text": "CityCharging"
-      },
-      {
-        "url": "/?p=26938",
-        "text": "GIS4smartCity"
-      },
-      {
-        "url": "/?p=26944",
-        "text": "CityTalks"
-      },
-      {
-        "url": "/?p=27339",
-        "text": "FleetoServices"
-      },
-      {
-        "url": "/?p=26613",
-        "text": "SafeAccess"
-      },
-      {
-        "url": "/?p=27366",
-        "text": "Spotyy"
-      },
-      {
-        "url": "/?p=27357",
-        "text": "SmartisCity"
-      },
-      {
-        "url": "/?p=27347",
-        "text": "Datagers"
       }
     ]
   },
@@ -772,9 +296,8 @@
     "documents": [
       {
         "url": "https://dotsoft.gr/wp-content/uploads/2026/06/ecocorner-5.pdf",
-        "source": "content",
-        "name": "ecocorner-5.pdf",
-        "ext": "pdf"
+        "source": "acf",
+        "name": "ecocorner-5.pdf"
       }
     ],
     "other": []

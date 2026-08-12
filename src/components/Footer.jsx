@@ -70,35 +70,34 @@ export default function Footer({ contact = {} }) {
             </div>
           </div>
 
-          <div className="hidden md:block md:w-[30%] md:min-h-[450px] md:bg-cover md:bg-center md:bg-no-repeat" 
-               style={{ backgroundImage: `url('/images/Background.png')` }} />
+          <div className="hidden md:block md:w-[30%] md:min-h-[450px] md:bg-cover md:bg-center md:bg-no-repeat"
+            style={{ backgroundImage: `url('/images/Background.png')` }} />
         </div>
       </div>
 
       <div className="relative border-t border-white/10 bg-[#19272B]">
-        <div className="mx-auto flex max-w-[1400px] flex-col items-center gap-4 px-4 py-6 text-xs text-white/80 sm:px-6 md:flex-row md:justify-between">
+        <div className="mx-auto flex max-w-[1400px] flex-col items-center gap-4 px-4 py-6 text-sm text-white/80 sm:px-6 md:flex-row md:justify-between">
           <div className="flex items-center gap-3 order-1">
-            <SocialIcon href="#" label="Facebook">
+            <SocialIcon href="https://www.facebook.com/dotsoft/" label="Facebook">
               <img src="/images/svg/facebook.svg" alt="Facebook" className="h-7 w-7" />
             </SocialIcon>
-            <SocialIcon href="#" label="YouTube">
+            <SocialIcon href="https://www.youtube.com/@dotsoftinfo7067" label="YouTube">
               <img src="/images/svg/youtube.svg" alt="YouTube" className="h-7 w-7" />
             </SocialIcon>
-            <SocialIcon href="#" label="LinkedIn">
+            <SocialIcon href="https://www.linkedin.com/company/dotsoft-sa/posts/?feedView=all" label="LinkedIn">
               <img src="/images/svg/linkedin.svg" alt="LinkedIn" className="h-7 w-7" />
             </SocialIcon>
           </div>
-
           <p className="order-3 text-center md:order-2 text-[#f1ffff]">
             © Copyright DOTSOFT SA {new Date().getFullYear()}. All Rights Reserved.
           </p>
 
           <div className="order-2 flex flex-col items-center gap-1 text-center md:order-3 md:items-end md:text-right text-[#ffffff]">
             <div className="flex gap-4">
-              <a href="#" className="hover:text-white text-[#ffffff]">Πολιτική Cookies</a>
-              <a href="#" className="hover:text-white text-[#ffffff]">Όροι Χρήσης</a>
+              <a href="/cookie-policy" className="hover:text-white text-[#ffffff] transition-colors">Πολιτική Cookies</a>
+              <a href="/terms-of-use" className="hover:text-white text-[#ffffff] transition-colors">Όροι Χρήσης</a>
             </div>
-            <a href="#" className="hover:text-white">Προσωπικά Δεδομένα</a>
+            <a href="/privacy-policy" className="hover:text-white transition-colors">Προσωπικά Δεδομένα</a>
           </div>
         </div>
       </div>

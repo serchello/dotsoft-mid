@@ -11,18 +11,6 @@ export default function Header({ post }) {
   const logoUrl2 = post?.header?.logo?.url || '/images/logo_header.png';
   const line = post?.header?.line?.url || '<div className="relative h-1.5 w-full bg-gradient-to-r from-[#2d7d46] via-[#7ac142] to-[#a8d84a]" />';
 
-  const splitTitle = (title) => {
-    if (!title) return null;
-    const match = title.match(/^([A-ZΑ-Ω][a-zα-ω]*)(.*)$/);
-    if (!match) return <span className="text-white">{title}</span>;
-    const [, first, rest] = match;
-    return (
-      <>
-        <span className="text-[#7ac142]">{first}</span>
-        <span className="text-white">{rest}</span>
-      </>
-    );
-  };
 
   return (
     <header className="relative">
@@ -46,7 +34,7 @@ export default function Header({ post }) {
               </svg>
             </button>
 
-            <div className="hidden flex-1 items-center gap-2 md:flex max-w-xs">
+            {/* <div className="hidden flex-1 items-center gap-2 md:flex max-w-xs">
               <svg className="h-4 w-4 text-white/50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-4.35-4.35M17 10a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>
@@ -55,7 +43,7 @@ export default function Header({ post }) {
                 placeholder="Αναζήτηση..."
                 className="w-full bg-transparent text-sm text-white placeholder-white/40 outline-none"
               />
-            </div>
+            </div> */}
 
             <button className="hidden items-center gap-1 text-sm text-white/80 hover:text-white sm:flex">
               Ελληνικά
@@ -64,7 +52,7 @@ export default function Header({ post }) {
               </svg>
             </button>
 
-            <button
+            {/* <button
               onClick={() => setMenuOpen((v) => !v)}
               aria-label="Μενού"
               aria-expanded={menuOpen}
@@ -73,7 +61,7 @@ export default function Header({ post }) {
               {Array.from({ length: 9 }).map((_, i) => (
                 <span key={i} className="h-[3px] w-[3px] rounded-full bg-white/80" />
               ))}
-            </button>
+            </button> */}
           </div>
         </div>
 
@@ -90,11 +78,24 @@ export default function Header({ post }) {
       </div>
 
       <div className="relative">
-        <div className="absolute right-0 top-1/2 h-3/4 w-2/5 -translate-y-1/2 bg-gradient-to-r from-transparent via-[#7ac142]/20 to-[#7ac142]/5 blur-3xl" />
+
+        <div
+          className="absolute right-0 top-1/2 h-3/4 w-2/3 -translate-y-1/2 blur-3xl"
+          style={{
+            background: `linear-gradient(
+                  to right,
+                  transparent 0%,
+                  ${post.header?.color || '#7ac142'} 40%,
+                  ${post.header?.color || '#7ac142'} 100%
+               
+                )`,
+          }}
+        />
+
         <div className="absolute right-0 top-1/2 h-1/2 w-1/3 -translate-y-1/2 bg-gradient-to-r from-transparent to-[#f5a623]/10 blur-2xl" />
 
         <div className="relative mx-auto flex max-w-[1400px] flex-col items-start gap-6 px-4 py-8 sm:px-6 sm:py-12 md:flex-row md:items-center md:justify-between md:py-14">
-          
+
           <div className="flex items-center gap-3 sm:gap-4">
             <img src={logoUrl} alt={title} className="h-16 w-auto sm:h-24" />
             <div>
@@ -105,7 +106,19 @@ export default function Header({ post }) {
 
           {quote && (
             <div className="relative w-full md:w-auto">
-              <div className="absolute -inset-6 bg-gradient-to-r from-[#7ac142]/30 via-[#7ac142]/10 to-transparent blur-2xl" />
+
+              <div
+                className="-inset-6 to-transparent blur-3xl"
+                style={{
+                  background: `linear-gradient(
+              to right,
+              transparent 0%,
+              ${post.header?.color || '#7ac142'} 50%,
+              ${post.header?.color || '#7ac142'} 100%
+            )`,
+                }}
+              />
+
               <div className="absolute -inset-8 bg-gradient-to-r from-[#f5a623]/20 to-transparent blur-3xl" />
               <p className="relative max-w-sm text-center text-xl font-semibold leading-relaxed text-white/95 sm:text-xl md:text-center md:text-xl lg:text-xl">
                 {quote}
@@ -114,9 +127,15 @@ export default function Header({ post }) {
           )}
         </div>
 
-        <img src={line} alt='line' />
-        
+        { line.trim().startsWith('<div') ? (
+          null
+        ) : (
+          <div className="absolute bottom-0 left-0 w-full">
+            <img src={line} alt='line' />
+          </div>
+        )}
       </div>
+
     </header>
   );
 }

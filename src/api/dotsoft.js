@@ -1,8 +1,8 @@
 const API_BASE = 'https://dotsoft.gr';
 
-export async function fetchPost(type, id, options = {}) {
-  const url = `${API_BASE}/wp-json/allposts/v1/${type}/${id}`;
-  
+export async function fetchPost(id, options = {}) {
+  const url = `${API_BASE}/wp-json/allposts/v1/service/${id}`;
+
   try {
     const response = await fetch(url, {
       ...options,
@@ -19,8 +19,12 @@ export async function fetchPost(type, id, options = {}) {
     const data = await response.json();
     return data;
   } catch (error) {
-    console.error('Error fetching post:', error);
-    throw error;
+    if (error?.name === 'AbortError') {
+      throw error
+    }
+
+    console.error('Error fetching post:', error)
+    throw error
   }
 }
 
@@ -89,19 +93,19 @@ export function parseServiceContent(content) {
 
 export function getYoutubeId(url) {
   if (!url) return null;
-  
+
   const patterns = [
     /(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&\s?#]+)/,
     /youtube\.com\/embed\/([^&\s?#]+)/
   ];
-  
+
   for (const pattern of patterns) {
     const match = url.match(pattern);
     if (match) {
       return match[1];
     }
   }
-  
+
   return null;
 }
 
