@@ -252,7 +252,7 @@ function renderImageSlider(block, index) {
             <img
               src={img.src}
               alt={img.alt || `Slide ${idx + 1}`}
-              className="w-full h-auto object-contain max-h-[100vh]" 
+              className="w-full h-auto object-contain max-h-[80vh]" 
               loading="lazy"
             />
             {img.caption && (
