@@ -24,12 +24,14 @@ export default function Footer({ contact = {} }) {
     <footer className="relative overflow-hidden text-white">
       <div className="relative">
         <div className="flex flex-col md:flex-row">
-          <div className="w-full md:w-[70%] px-14 sm:px-20 pb-6 pt-12 bg-[#1f2e32]">
+          <div className="w-full md:w-[70%] px-14 sm:px-20 pt-12 bg-[#1f2e32]">
             <a href="/" className="inline-flex items-center gap-2">
               <img src="/images/logo_footer.png" alt="DOTSOFT" className="h-9 w-auto" />
             </a>
 
             <div className="mt-10 grid grid-cols-1 gap-10 sm:mt-12 md:grid-cols-2 md:gap-16">
+              
+
               <div>
                 <h3 className="text-md font-semibold tracking-wide text-white/70">Επικοινωνία</h3>
                 <ul className="mt-4 space-y-3 text-sm text-white/80">
@@ -46,6 +48,16 @@ export default function Footer({ contact = {} }) {
               </div>
 
               <div>
+                <h3 className="text-md font-semibold tracking-wide text-white/70">Σχετικά με εμάς</h3>
+                <p className="mt-4 text-sm text-white/80">
+                  Η DOTSOFT είναι μια εταιρεία που ειδικεύεται στην ανάπτυξη καινοτόμων τεχνολογιών για επιχειρήσεις και οργανισμούς.
+                  Προσφέρουμε λύσεις λογισμικού υψηλής ποιότητας που καλύπτουν τις ανάγκες των πελατών μας.
+
+                </p>
+              </div>
+
+
+              {/* <div>
                 <h3 className="text-md font-semibold tracking-wide text-white/70">Εγγραφείτε στο Newsletter!</h3>
 
                 {status === 'sent' ? (
@@ -66,11 +78,11 @@ export default function Footer({ contact = {} }) {
                     </button>
                   </form>
                 )}
-              </div>
+              </div> */}
             </div>
           </div>
 
-          <div className="hidden md:block md:w-[30%] md:min-h-[450px] md:bg-cover md:bg-center md:bg-no-repeat"
+          <div className="hidden md:block md:w-[30%] md:min-h-[370px] md:bg-cover md:bg-center md:bg-no-repeat"
             style={{ backgroundImage: `url('/images/Background.png')` }} />
         </div>
       </div>
