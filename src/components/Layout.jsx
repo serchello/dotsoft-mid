@@ -1,18 +1,18 @@
+import { Helmet } from 'react-helmet-async';
 import { useEffect, useState } from 'react';
 import Header from './Header.jsx';
 import Footer from './Footer.jsx';
 import { fetchPost } from '../api/dotsoft.js';
 import { LoadingScreen } from './StatusScreens.jsx';
 
-// ID берем из вашей переменной окружения (как вы просили ранее)
 const DEFAULT_HEADER_ID = import.meta.env.VITE_APP_POST_ID;
 
-export default function Layout({ children }) {
+export default function Layout({ children, title, description }) {
   const [headerData, setHeaderData] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Функция загрузки шапки
+   
     async function loadHeader() {
       try {
         // Загружаем данные для шапки (тип 'service', ID из env)
@@ -43,6 +43,12 @@ export default function Layout({ children }) {
 
   return (
     <div className="min-h-screen flex flex-col bg-[#ffffff] text-white">
+     
+      <Helmet>
+        <title>{title ? `${title} | DOTSOFT` : 'DOTSOFT'}</title>
+        <meta name="description" content={description || 'DOTSOFT - Innovative Technologies'} />
+      </Helmet>
+     
       {/* Передаем загруженные данные в Header */}
       <Header post={headerData} />
 

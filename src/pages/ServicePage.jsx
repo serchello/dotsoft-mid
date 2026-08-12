@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-
 import Layout from '../components/Layout.jsx';
 import ContentSection from '../components/ContentSection.jsx';
 import { ErrorScreen } from '../components/StatusScreens.jsx';
@@ -60,7 +59,7 @@ export default function ServicePage({ id } = {}) {
 
   function getEmbedUrl(url) {
     if (!url) return null;
-    // Проверяем, не является ли уже embed-ссылкой
+    // check if embed-link
     if (url.includes('/embed/')) return url;
 
     const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
@@ -74,7 +73,7 @@ export default function ServicePage({ id } = {}) {
 
 
   return (
-    <Layout>
+    <Layout title={post.title} description={post.excerpt}>
       <ContentSection blocks={blocks} bodyHtml={bodyHtml} pdfUrl={post.meta?.docs_0_doc_link} videoUrl={embedVideoUrl} />
     </Layout>
   );
