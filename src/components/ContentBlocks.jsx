@@ -97,7 +97,7 @@ function renderText(block, index) {
   return (
     <div
       key={index}
-      className="text-gray-700 text-base md:text-lg content-with-line-height"
+      className="text-gray-700 text-base md:text-base content-with-line-height"
       dangerouslySetInnerHTML={{ __html: cleanHtml }}
     />
   );
@@ -107,8 +107,8 @@ function renderList(block, index) {
   const isOrdered = block.style === 'ol';
   const ListTag = isOrdered ? 'ol' : 'ul';
   const className = isOrdered
-    ? 'list-decimal list-inside space-y-0 text-gray-700 pl-4'
-    : 'list-disc list-inside space-y-0 text-gray-700 pl-4';
+    ? 'list-decimal list-inside space-y-0 text-gray-700 pl-3'
+    : 'list-disc list-inside space-y-0 text-gray-700 pl-3';
 
   const items = block.items || [];
 

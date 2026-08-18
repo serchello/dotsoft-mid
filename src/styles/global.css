@@ -155,6 +155,20 @@ button {
     justify-content: center !important;
   }
 
+.space-y-6 > :not([hidden]) ~ :not([hidden]) {
+    margin-top: 4px;
+    margin-bottom: 16px;
+  }
 
+{{/* em{
+   color: var(--accent-live);
+  }
+   */}}
 
+@media (max-width: 768px) {
+  
+.carousel .slide img {
+    width:70%;
+  }
+}
 

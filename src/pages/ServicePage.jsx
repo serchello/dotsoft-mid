@@ -92,8 +92,8 @@ export default function ServicePage({ id } = {}) {
 
   return (
     <Layout title={post.title} description={post.excerpt}>
-      <div className="mx-auto max-w-[1420px] px-4 py-12">
-        <div className="flex flex-col md:flex-row gap-8 md:gap-12">
+      <div className="mx-auto max-w-[1420px] px-4 py-8">
+        <div className="flex flex-col md:flex-row gap-6 md:gap-12">
           
           {/* ЛЕВАЯ КОЛОНКА: только текст и списки */}
           <div className={`w-full ${hasRightSideContent ? 'md:w-3/5 lg:w-3/5 md:pr-4' : 'md:w-full'}`}>

@@ -36,6 +36,7 @@ export default function RightSidebar({ videoUrl, pdfUrl, images }) {
         </div>
       )}
 
+
       {/* 2. СЛАЙДЕР С КАРТИНКАМИ (НОВЫЙ БЛОК) */}
       {images && images.length > 0 && (
         <div className="overflow-hidden">
@@ -65,7 +66,7 @@ export default function RightSidebar({ videoUrl, pdfUrl, images }) {
               emulateTouch={true}
               showStatus={false}
               centerMode={true}
-              thumbWidth={60}
+              thumbWidth={70}
               renderArrowPrev={(onClickHandler, hasPrev, label) =>
                 hasPrev && (
                   <button
@@ -98,7 +99,7 @@ export default function RightSidebar({ videoUrl, pdfUrl, images }) {
                 if (isSelected) {
                   return (
                     <li
-                      className="inline-block mx-1 w-2.5 h-2.5 rounded-full bg-[#7ac142] cursor-pointer"
+                      className="inline-block mx-1 w-2.5 h-2.5 rounded-full bg-[#2c3029] cursor-pointer"
                       aria-label={`Selected: ${label} ${index + 1}`}
                       title={`Selected: ${label} ${index + 1}`}
                     />
@@ -123,7 +124,7 @@ export default function RightSidebar({ videoUrl, pdfUrl, images }) {
                   <img
                     src={img.src}
                     alt={img.alt || `Slide ${idx + 1}`}
-                    className="w-full h-auto object-contain max-h-[60vh]"
+                    className="w-full h-auto object-contain max-h-[46vh]"
                     loading="lazy"
                   />
                   {img.caption && (

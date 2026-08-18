@@ -22,7 +22,7 @@ export default function ContentSection({ blocks, bodyHtml, onImagesExtracted }) 
   }
 
   return (
-    <section className="py-2 bg-white">
+    <section className="py-1 bg-white">
       {blocks && blocks.length > 0 ? (
         <ContentBlocks blocks={blocks} />
       ) : (
