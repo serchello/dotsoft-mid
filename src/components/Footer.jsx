@@ -21,11 +21,11 @@ export default function Footer({ contact = {} }) {
   }
 
   return (
-    <footer className="relative overflow-hidden text-white">
+    <footer className="relative overflow-hidden text-white font-['Commissioner',sans-serif]">
       <div className="relative">
         <div className="flex flex-col md:flex-row">
           <div className="w-full md:w-[70%] px-14 sm:px-20 pt-12 bg-[#1f2e32]">
-            <a href="/" className="inline-flex items-center gap-2">
+            <a href="https://dotsoft.gr/" className="inline-flex items-center gap-2" aria-label="DOTSOFT" target="_blank" rel="noopener noreferrer">
               <img src="/images/logo_footer.png" alt="DOTSOFT" className="h-9 w-auto" />
             </a>
 

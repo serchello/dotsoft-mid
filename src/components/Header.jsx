@@ -23,7 +23,7 @@ export default function Header({ post }) {
 
       <div className="relative bg-transparent text-white border-b-2 border-white/60">
         <div className="mx-auto flex h-14 max-w-[1400px] items-center justify-between gap-4 px-4 sm:px-6">
-          <a href="/" className="flex items-center gap-2 shrink-0">
+          <a href="https://dotsoft.gr/" className="flex items-center gap-2 shrink-0" aria-label="DOTSOFT" target="_blank" rel="noopener noreferrer">
             <img src="/images/dotsoft-logo.png" alt="DOTSOFT" className="h-14 w-auto" />
           </a>
 
@@ -45,7 +45,7 @@ export default function Header({ post }) {
               />
             </div> */}
 
-            <button className="hidden items-center gap-1 text-sm text-white/80 hover:text-white sm:flex">
+            <button className="hidden items-center gap-1 text-sm text-white/80 hover:text-white sm:flex font-['Commissioner',sans-serif]">
               Ελληνικά
               <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -72,7 +72,7 @@ export default function Header({ post }) {
               placeholder="Αναζήτηση..."
               className="mb-3 w-full rounded bg-white/10 px-3 py-2 text-sm text-white placeholder-white/40 outline-none"
             />
-            <button className="text-sm text-white/80">Ελληνικά</button>
+            <button className="font-['Commissioner',sans-serif] text-sm text-white/80 hover:text-white">Ελληνικά</button>
           </div>
         )}
       </div>
@@ -100,7 +100,7 @@ export default function Header({ post }) {
             <img src={logoUrl} alt={title} className="h-16 w-auto sm:h-24" />
             <div>
               <img src={logoUrl2} alt={title} className="h-12 w-auto sm:h-12" />
-              <p className="mt-1 text-md tracking-widest text-white/50 sm:text-md">{tagline}</p>
+              <p className="font-['Commissioner',sans-serif] mt-1 text-md tracking-widest text-white/50 sm:text-md">{tagline}</p>
             </div>
           </div>
 
@@ -120,7 +120,7 @@ export default function Header({ post }) {
               />
 
               <div className="absolute -inset-8 bg-gradient-to-r from-[#f5a623]/20 to-transparent blur-3xl" />
-              <p className="relative max-w-sm text-center text-xl font-semibold leading-relaxed text-white/95 sm:text-xl md:text-center md:text-xl lg:text-xl">
+              <p className="font-['Commissioner',sans-serif] relative max-w-sm text-center text-xl font-semibold leading-relaxed text-white/95 sm:text-xl md:text-center md:text-xl lg:text-xl">
                 {quote}
               </p>
             </div>
