@@ -161,10 +161,6 @@ button {
     margin-bottom: 16px;
   }
 
-{{/* em{
-   color: var(--accent-live);
-  }
-   */}}
 
 @media (max-width: 768px) {
   
