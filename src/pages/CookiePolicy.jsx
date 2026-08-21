@@ -4,7 +4,7 @@ export default function CookiePolicy() {
   return (
     <Layout title="Πολιτική Cookies" description="Η πολιτική cookies της DOTSOFT">
       <div className="container mx-auto px-4 max-w-4xl">
-        <h1 className="text-3xl font-bold mb-10 py-8">Πολιτική Cookies</h1>
+        <h1 className="text-3xl font-bold py-8">Πολιτική Cookies</h1>
         <div className="prose prose-invert max-w-none text-gray-800">
 
           <p className="western rtejustify">
