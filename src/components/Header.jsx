@@ -7,8 +7,8 @@ export default function Header({ post }) {
   const tagline = post?.excerpt || 'Παροχή εργασιών πεδίου';
   const quote = post?.meta?.quote || post?.header?.quote || 'Έξυπνη ανακύκλωση, καθαρές πόλεις, ενεργοί πολίτες';
 
-  const logoUrl = post?.header?.banner?.url || post?.header?.logo?.url || '/images/logo_header.png';
-  const logoUrl2 = post?.header?.logo?.url || '/images/logo_header.png';
+  const logoUrl = post?.header?.banner?.url || '';
+  const logoUrl2 = post?.header?.logo?.url || '';
   const line = post?.header?.line?.url || '<div className="relative h-1.5 w-full bg-gradient-to-r from-[#2d7d46] via-[#7ac142] to-[#a8d84a]" />';
 
 
@@ -97,9 +97,13 @@ export default function Header({ post }) {
         <div className="relative mx-auto flex max-w-[1400px] flex-col items-start gap-6 px-4 py-8 sm:px-6 sm:py-12 md:flex-row md:items-center md:justify-between md:py-14">
 
           <div className="flex items-center gap-3 sm:gap-4">
-            <img src={logoUrl} alt={title} className="h-16 w-auto sm:h-24" />
+            {logoUrl && (
+              <img src={logoUrl} alt={title} className="h-16 w-auto sm:h-24" />
+            )}
             <div>
-              <img src={logoUrl2} alt={title} className="h-12 w-auto sm:h-12" />
+              {logoUrl2 && (
+                <img src={logoUrl2} alt={title} className="h-12 w-auto sm:h-12" />
+              )}
               <p className="font-['Commissioner',sans-serif] mt-1 text-md tracking-widest text-white/50 sm:text-md">{tagline}</p>
             </div>
           </div>

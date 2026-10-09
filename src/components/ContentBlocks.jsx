@@ -73,6 +73,14 @@ function renderText(block, index) {
 
   let cleanHtml = block.html.trim();
 
+
+
+
+  
+
+
+
+
   // 1. УДАЛЯЕМ ЛЮБЫЕ ССЫЛКИ НА PDF с текстом "Κατεβάστε το φυλλάδιο"
   const pdfRegex = /<a[^>]*href="[^"]*\.pdf"[^>]*>[\s\S]*?Κατεβάστε το φυλλάδιο[\s\S]*?<\/a>/gi;
   cleanHtml = cleanHtml.replace(pdfRegex, '');
