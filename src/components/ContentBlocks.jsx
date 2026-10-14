@@ -18,12 +18,12 @@ export default function ContentBlocks({ blocks }) {
         j++;
       }
 
-      // Вместо того чтобы рендерить слайдер, просто сохраняем картинки в массив
-      imageGroup.forEach(img => {
+      // Сохраняем картинки в массив (для правой колонки)
+      imageGroup.forEach((img) => {
         extractedImages.push({
           src: img.src,
           alt: img.alt || 'Image',
-          caption: img.caption || ''
+          caption: img.caption || '',
         });
       });
 
@@ -52,20 +52,25 @@ export default function ContentBlocks({ blocks }) {
   );
 }
 
-// --- Функции рендеринга (остаются без изменений) ---
+// --- function render ---
 
 function renderHeading(block, index) {
   const level = block.level || 2;
-  const className = {
-    1: 'text-4xl font-bold text-[#1a3a2a] mb-6',
-    2: 'text-3xl font-bold text-[#1a3a2a] mb-4 mt-8',
-    3: 'text-2xl font-semibold text-[#1a3a2a] mb-3 mt-6',
-    4: 'text-xl font-semibold text-[#1a3a2a] mb-2 mt-4',
-    5: 'text-lg font-medium text-[#1a3a2a] mb-2 mt-4',
-    6: 'text-base font-medium text-[#1a3a2a] mb-2 mt-3'
-  }[level] || 'text-2xl font-bold text-[#1a3a2a] mb-4 mt-8';
+  const className =
+    {
+      1: 'text-4xl font-bold text-[#1a3a2a] mb-6',
+      2: 'text-3xl font-bold text-[#1a3a2a] mb-4 mt-8',
+      3: 'text-2xl font-semibold text-[#1a3a2a] mb-3 mt-6',
+      4: 'text-xl font-semibold text-[#1a3a2a] mb-2 mt-4',
+      5: 'text-lg font-medium text-[#1a3a2a] mb-2 mt-4',
+      6: 'text-base font-medium text-[#1a3a2a] mb-2 mt-3',
+    }[level] || 'text-2xl font-bold text-[#1a3a2a] mb-4 mt-8';
 
-  return <div key={index} className={className}>{block.text}</div>;
+  return (
+    <div key={index} className={className}>
+      {block.text}
+    </div>
+  );
 }
 
 function renderText(block, index) {
@@ -73,33 +78,23 @@ function renderText(block, index) {
 
   let cleanHtml = block.html.trim();
 
-
-
-
-  
-
-
-
-
-  // 1. УДАЛЯЕМ ЛЮБЫЕ ССЫЛКИ НА PDF с текстом "Κατεβάστε το φυλλάδιο"
+  // 1. delete PDF links that contain the text "Κατεβάστε το φυλλάδιο" (Download the brochure)
   const pdfRegex = /<a[^>]*href="[^"]*\.pdf"[^>]*>[\s\S]*?Κατεβάστε το φυλλάδιο[\s\S]*?<\/a>/gi;
   cleanHtml = cleanHtml.replace(pdfRegex, '');
 
-  // 2. УДАЛЯЕМ ЛЮБЫЕ ТЕКСТОВЫЕ ССЫЛКИ НА YOUTUBE (как HTML-ссылки, так и голый текст)
-  // Сначала удаляем HTML-теги <a>
+  // 2. delete HTML links to YouTube (wrapped in <a>)
   const youtubeLinkRegex = /<a[^>]*href="[^"]*youtube\.com\/watch\?v=[^"]*"[^>]*>[\s\S]*?<\/a>/gi;
   cleanHtml = cleanHtml.replace(youtubeLinkRegex, '');
 
-  // 3. УДАЛЯЕМ ГОЛЫЙ ТЕКСТ ССЫЛКИ (ваш случай)
-  const youtubeTextRegex = /https?:\/\/(www\.)?youtube\.com\/watch\?v=[^\s]+/gi;
-  cleanHtml = cleanHtml.replace(youtubeTextRegex, '');
+  // 3. embed YouTube links that are not wrapped in <a> tags
+  cleanHtml = embedYouTubeLinks(cleanHtml);
 
-  // 4. УДАЛЯЕМ ПУСТЫЕ СТРОКИ, ОСТАВШИЕСЯ ПОСЛЕ УДАЛЕНИЯ
+  // 4. delete empty lines and paragraphs, left after cleaning
   cleanHtml = cleanHtml.replace(/<br\s*\/?>/gi, '');
   cleanHtml = cleanHtml.replace(/<p>\s*<\/p>/gi, '');
   cleanHtml = cleanHtml.trim();
 
-  // Если после очистки не осталось текста, ничего не рендерим
+  // If after cleaning there is no text left, don't render anything
   if (!cleanHtml) return null;
 
   return (
@@ -109,6 +104,39 @@ function renderText(block, index) {
       dangerouslySetInnerHTML={{ __html: cleanHtml }}
     />
   );
+}
+
+/**
+ * 👇 Хелпер: заменяет голые YouTube-ссылки на встроенный iframe-плеер
+ * Ловит три формата: youtube.com/watch?v=, youtu.be/, youtube.com/embed/
+ * Пропускает ссылки внутри <a href="...">, чтобы не ломать разметку.
+ */
+function embedYouTubeLinks(html) {
+  // Regex для трёх форматов YouTube
+  const ytRegex =
+    /(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([a-zA-Z0-9_-]{11})/g;
+
+  // Паттерн для проверки, что ссылка внутри <a href="..."> (не трогаем такие)
+  return html.replace(ytRegex, (match, videoId, offset, fullString) => {
+    // Смотрим 30 символов перед ссылкой — не является ли она частью <a href="...">
+    const before = fullString.slice(Math.max(0, offset - 30), offset);
+    if (/<a[^>]*href=["'][^"']*$/.test(before)) {
+      return match; // пропускаем, оставляем ссылку как есть
+    }
+
+    // Красивый адаптивный iframe (соотношение 16:9)
+    return `
+      <div style="position:relative;width:100%;padding-bottom:56.25%;margin:1.5rem 0;border-radius:0.75rem;overflow:hidden;background:#000;">
+        <iframe
+          src="https://www.youtube.com/embed/${videoId}"
+          title="YouTube video"
+          style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+    `;
+  });
 }
 
 function renderList(block, index) {
