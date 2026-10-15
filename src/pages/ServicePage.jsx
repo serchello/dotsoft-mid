@@ -16,7 +16,7 @@ export default function ServicePage({ id } = {}) {
     error: null,
   });
 
-  const [extractedImages, setExtractedImages] = useState([]); // 👈 Стейт для картинок
+  const [extractedImages, setExtractedImages] = useState([]);
 
   useEffect(() => {
     const controller = new AbortController();
@@ -72,49 +72,77 @@ export default function ServicePage({ id } = {}) {
 
   function getEmbedUrl(url) {
     if (!url) return null;
-    if (url.includes('/embed/')) return url;
+
+    const decoded = url.replace(/&amp;/g, '&');
+
+    if (decoded.includes('/embed/')) {
+      return decoded.replace(/([?&])t=[^&]*/i, '').replace(/[?&]$/, '');
+    }
+
+    const cleaned = decoded
+      .replace(/([?&])t=[^&]*/gi, '')
+      .replace(/([?&])start=[^&]*/gi, '')
+      .replace(/[?&]$/, '');
+
     const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
-    const match = url.match(regExp);
+    const match = cleaned.match(regExp);
+
     return (match && match[2].length === 11)
       ? `https://www.youtube.com/embed/${match[2]}`
-      : url;
+      : cleaned;
   }
 
-  const embedVideoUrl = getEmbedUrl(videoUrl);
+  // 👇 Проверяем, есть ли YouTube-ссылка в body или в блоках.
+  const hasVideoInBody = (() => {
+    const ytRegex = /(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([a-zA-Z0-9_-]{11})/;
 
-  // Коллбек, который получает картинки из ContentSection
+    const check = (str) =>
+      typeof str === 'string' && ytRegex.test(str.replace(/&amp;/g, '&'));
+
+    if (check(bodyHtml)) return true;
+
+    if (Array.isArray(blocks)) {
+      for (const b of blocks) {
+        if (b?.type === 'text' && check(b.html)) return true;
+      }
+    }
+    return false;
+  })();
+
+  // Если видео найдено в body — не показываем его в правой колонке
+  const embedVideoUrl = hasVideoInBody ? null : getEmbedUrl(videoUrl);
+
   const handleImagesExtracted = (images) => {
     setExtractedImages(images);
   };
 
-  // 👇 ПРОВЕРКА: есть ли что-то в правой колонке?
   const hasRightSideContent = embedVideoUrl || pdfUrl || (extractedImages && extractedImages.length > 0);
 
   return (
     <Layout title={post.title} description={post.excerpt}>
       <div className="mx-auto max-w-[1420px] px-4 py-8">
         <div className="flex flex-col md:flex-row gap-6 md:gap-12">
-          
-          {/* ЛЕВАЯ КОЛОНКА: только текст и списки */}
+
+          {/* ЛЕВАЯ КОЛОНКА: текст, списки, встроенное видео из body */}
           <div className={`w-full ${hasRightSideContent ? 'md:w-3/5 lg:w-3/5 md:pr-4' : 'md:w-full'}`}>
             <ContentSection
               blocks={blocks}
               bodyHtml={bodyHtml}
-              onImagesExtracted={handleImagesExtracted} // 👈 Передаем коллбек
+              onImagesExtracted={handleImagesExtracted}
             />
           </div>
 
-          {/* ПРАВАЯ КОЛОНКА: видео, PDF и ТЕПЕРЬ ЕЩЕ И КАРТИНКИ */}
+          {/* ПРАВАЯ КОЛОНКА: видео (только если его нет в body), PDF, картинки */}
           {hasRightSideContent && (
             <div className="w-full md:w-2/5 lg:w-2/5">
-              <RightSidebar 
-                videoUrl={embedVideoUrl} 
+              <RightSidebar
+                videoUrl={embedVideoUrl}
                 pdfUrl={pdfUrl}
                 images={extractedImages}
               />
             </div>
           )}
-          
+
         </div>
       </div>
     </Layout>

@@ -2,7 +2,7 @@ export default function ContentBlocks({ blocks }) {
   if (!blocks || blocks.length === 0) return null;
 
   const processedBlocks = [];
-  const extractedImages = []; // 📸 Сюда будем собирать все картинки
+  const extractedImages = [];
 
   let i = 0;
 
@@ -18,7 +18,6 @@ export default function ContentBlocks({ blocks }) {
         j++;
       }
 
-      // Сохраняем картинки в массив (для правой колонки)
       imageGroup.forEach((img) => {
         extractedImages.push({
           src: img.src,
@@ -27,7 +26,7 @@ export default function ContentBlocks({ blocks }) {
         });
       });
 
-      i = j; // Перепрыгиваем
+      i = j;
     } else {
       processedBlocks.push(currentBlock);
       i++;
@@ -76,25 +75,7 @@ function renderHeading(block, index) {
 function renderText(block, index) {
   if (!block.html) return null;
 
-  let cleanHtml = block.html.trim();
-
-  // 1. delete PDF links that contain the text "Κατεβάστε το φυλλάδιο" (Download the brochure)
-  const pdfRegex = /<a[^>]*href="[^"]*\.pdf"[^>]*>[\s\S]*?Κατεβάστε το φυλλάδιο[\s\S]*?<\/a>/gi;
-  cleanHtml = cleanHtml.replace(pdfRegex, '');
-
-  // 2. delete HTML links to YouTube (wrapped in <a>)
-  const youtubeLinkRegex = /<a[^>]*href="[^"]*youtube\.com\/watch\?v=[^"]*"[^>]*>[\s\S]*?<\/a>/gi;
-  cleanHtml = cleanHtml.replace(youtubeLinkRegex, '');
-
-  // 3. embed YouTube links that are not wrapped in <a> tags
-  cleanHtml = embedYouTubeLinks(cleanHtml);
-
-  // 4. delete empty lines and paragraphs, left after cleaning
-  cleanHtml = cleanHtml.replace(/<br\s*\/?>/gi, '');
-  cleanHtml = cleanHtml.replace(/<p>\s*<\/p>/gi, '');
-  cleanHtml = cleanHtml.trim();
-
-  // If after cleaning there is no text left, don't render anything
+  const cleanHtml = cleanBodyHtml(block.html);
   if (!cleanHtml) return null;
 
   return (
@@ -106,25 +87,20 @@ function renderText(block, index) {
   );
 }
 
-/**
- * 👇 Хелпер: заменяет голые YouTube-ссылки на встроенный iframe-плеер
- * Ловит три формата: youtube.com/watch?v=, youtu.be/, youtube.com/embed/
- * Пропускает ссылки внутри <a href="...">, чтобы не ломать разметку.
- */
+// 👇 Хелпер: заменяет голые YouTube-ссылки на iframe
 function embedYouTubeLinks(html) {
-  // Regex для трёх форматов YouTube
-  const ytRegex =
-    /(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([a-zA-Z0-9_-]{11})/g;
+  const normalized = html.replace(/&amp;/g, '&');
 
-  // Паттерн для проверки, что ссылка внутри <a href="..."> (не трогаем такие)
-  return html.replace(ytRegex, (match, videoId, offset, fullString) => {
-    // Смотрим 30 символов перед ссылкой — не является ли она частью <a href="...">
+  // 👇 Регекс теперь захватывает и хвост с таймкодом: &t=13s, &start=13, ?t=13s и т.д.
+  const ytRegex =
+    /(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([a-zA-Z0-9_-]{11})(?:[?&](?:t|start|end|list|feature)=[^&\s<"']*)*/g;
+
+  return normalized.replace(ytRegex, (match, videoId, offset, fullString) => {
     const before = fullString.slice(Math.max(0, offset - 30), offset);
     if (/<a[^>]*href=["'][^"']*$/.test(before)) {
-      return match; // пропускаем, оставляем ссылку как есть
+      return match;
     }
 
-    // Красивый адаптивный iframe (соотношение 16:9)
     return `
       <div style="position:relative;width:100%;padding-bottom:56.25%;margin:1.5rem 0;border-radius:0.75rem;overflow:hidden;background:#000;">
         <iframe
@@ -137,6 +113,27 @@ function embedYouTubeLinks(html) {
       </div>
     `;
   });
+}
+
+// 👇 Хелпер: чистка bodyHtml — вырезаем PDF-ссылки, превращаем YouTube в iframe
+export function cleanBodyHtml(html) {
+  if (!html) return '';
+
+  let cleanHtml = html.replace(/&amp;/g, '&');
+
+  const pdfRegex = /<a[^>]*href="[^"]*\.pdf"[^>]*>[\s\S]*?Κατεβάστε το φυλλάδιο[\s\S]*?<\/a>/gi;
+  cleanHtml = cleanHtml.replace(pdfRegex, '');
+
+  const youtubeLinkRegex = /<a[^>]*href="[^"]*youtube\.com\/watch\?v=[^"]*"[^>]*>[\s\S]*?<\/a>/gi;
+  cleanHtml = cleanHtml.replace(youtubeLinkRegex, '');
+
+  cleanHtml = embedYouTubeLinks(cleanHtml);
+
+  cleanHtml = cleanHtml.replace(/<br\s*\/?>/gi, '');
+  cleanHtml = cleanHtml.replace(/<p>\s*<\/p>/gi, '');
+  cleanHtml = cleanHtml.trim();
+
+  return cleanHtml;
 }
 
 function renderList(block, index) {

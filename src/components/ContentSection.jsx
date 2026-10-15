@@ -1,12 +1,9 @@
-import ContentBlocks from './ContentBlocks.jsx';
+import ContentBlocks, { cleanBodyHtml } from './ContentBlocks.jsx';
 
 export default function ContentSection({ blocks, bodyHtml, onImagesExtracted }) {
   let extractedImages = [];
 
-  // Если есть blocks - рендерим их, а заодно и собираем картинки
   if (blocks && blocks.length > 0) {
-    // Чтобы получить картинки, мы можем просто вызвать ContentBlocks с дополнительным пропсом
-    // Или использовать тот же алгоритм, что и внутри ContentBlocks, но проще всего:
     extractedImages = blocks
       .filter(block => block.type === 'image')
       .map(img => ({
@@ -16,20 +13,22 @@ export default function ContentSection({ blocks, bodyHtml, onImagesExtracted }) 
       }));
   }
 
-  // Если есть коллбек от родителя, передаем картинки наверх
   if (onImagesExtracted) {
     onImagesExtracted(extractedImages);
   }
 
+  const hasBlocks = blocks && blocks.length > 0;
+  const cleanedBody = !hasBlocks ? cleanBodyHtml(bodyHtml || '') : '';
+
   return (
     <section className="py-1 bg-white">
-      {blocks && blocks.length > 0 ? (
+      {hasBlocks ? (
         <ContentBlocks blocks={blocks} />
       ) : (
         <div className="container mx-auto w-full px-4">
           <div
             className="prose prose-lg max-w-none w-full text-gray-700"
-            dangerouslySetInnerHTML={{ __html: bodyHtml || '' }}
+            dangerouslySetInnerHTML={{ __html: cleanedBody }}
           />
         </div>
       )}
